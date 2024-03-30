@@ -1,0 +1,44 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { getHomePermalink } from "~/utils/permalinks";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
+
+const metadata = {
+    title: "Ocean Express CR",
+    ignoreTitleTemplate: true,
+    description: "s",
+    openGraph: {
+        basic: {
+            title: `Privacy - OceanExpress CR`,
+            type: "article",
+            image: "/src/assets/images/defaultog.png",
+            description: "afaef",
+        },
+    },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="flex h-full items-center p-16">
+    <div class="container mx-auto my-8 flex flex-col items-center justify-center px-5">
+      <div class="max-w-md text-center">
+        <h2 class="mb-8 text-9xl font-bold">
+          <span class="sr-only">Error</span>
+          <span class="text-primary">404</span>
+        </h2>
+        <p class="text-3xl font-semibold md:text-3xl">Lo sentimos, no hemos podido encontrar esta página.</p>
+        <p class="mb-8 mt-4 text-lg text-muted">
+          Pero no se preocupe, puede encontrar muchas otras cosas en nuestra página web.
+        </p>
+
+        <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+        <p class="mb-8 mt-4 text-lg text-muted">But don't worry, you can find many other things on our website.</p>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4"
+          >{t('404.action')} - Back to the home page</a
+        >
+      </div>
+    </div>
+  </section>
+</Layout>

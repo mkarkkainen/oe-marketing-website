@@ -1,0 +1,83 @@
+---
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+import type { CallToAction } from '~/types';
+import { t } from 'i18next';
+
+export interface Props {
+  id?: string;
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  content?: string;
+  actions?: string | CallToAction[];
+  image?: string | any;
+}
+
+const {
+  id,
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+  content = await Astro.slots.render('content'),
+  actions = await Astro.slots.render('actions'),
+  image = await Astro.slots.render('image'),
+} = Astro.props;
+---
+
+<section class="not-prose relative md:-mt-[76px]" {...id ? { id } : {}}>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="flex py-36 md:pt-56">
+      <div class="z-10 max-w-2xl pb-10 text-start md:pb-16">
+        {
+          tagline && (
+            <span
+              class="font-bold uppercase tracking-wide text-secondary [font-size:_clamp(0.8125rem,1.6vw,1rem)]"
+              set:html={t(tagline)}
+            />
+          )
+        }
+        {
+          title && (
+            <h1
+              class="tracking-loose mb-4 font-heading font-bold leading-[120%] text-dark font-size:_clamp(2.4375rem,5vw,3.8125rem)]"
+              set:html={t(title)}
+            />
+          )
+        }
+        <div class="max-w-3xl">
+          {subtitle && <p class="mb-6 text-xl text-muted" set:html={subtitle} />}
+
+          {
+            actions && (
+              <div class="flex flex-col flex-nowrap gap-4 sm:flex-row sm:justify-start">
+                {Array.isArray(actions) ? (
+                  actions.map((action) => (
+                    <div class="flex w-full sm:w-auto">
+                      <Button text={t('cta.primary')} {...(action || {})} class="w-full sm:mb-0" />
+                    </div>
+                  ))
+                ) : (
+                  <Fragment set:html={actions} />
+                )}
+              </div>
+            )
+          }
+        </div>
+
+        {content && <Fragment set:html={content} />}
+        {
+          image && (
+            <div class="absolute left-0 top-0 -z-10 mt-16 w-full bg-hero bg-cover">
+              {typeof image === 'string' ? (
+                <Fragment set:html={image} />
+              ) : (
+                <Image class="mx-auto w-full rounded-md" widths={[400, 768, 1024, 2040]} loading="eager" {...image} />
+              )}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>

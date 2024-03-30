@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "allowJs": true,
+    "baseUrl": "/Users/miikka/Code/oe-astrotemplate",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}

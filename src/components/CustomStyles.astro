@@ -1,0 +1,36 @@
+<style is:inline is:global>
+  :root {
+    --oe-font-sans: 'DM Sans', sans-serif;
+    --oe-font-serif: var(--oe-font-sans);
+    --oe-font-heading: var(--oe-font-sans);
+
+    --oe-color-primary-dark: rgb(29 70 100);
+    --oe-color-primary: rgb(11 77 157);
+    --oe-color-secondary: rgb(30 58 138);
+    --oe-color-accent: rgb(109 40 217);
+
+    --oe-color-text-heading: rgb(0 0 0);
+    --oe-color-text-default: rgb(16 16 16);
+    --oe-color-text-muted: rgb(16 16 16 / 88%);
+    --oe-color-bg-page: rgb(240, 240, 233);
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+
+    ::selection {
+      background-color: lavender;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    /* Target all elements and pseudo-elements */
+    *,
+    *::before,
+    *::after {
+      /* Disable all animations and transitions */
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
+</style>

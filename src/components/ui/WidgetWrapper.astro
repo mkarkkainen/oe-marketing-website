@@ -1,0 +1,16 @@
+---
+import { twMerge } from 'tailwind-merge';
+
+const { id = false, containerClass = '', bg, as = 'section' } = Astro.props;
+---
+
+<section class="not-prose relative scroll-mt-[72px] py-8 md:p-clamp" {...id ? { id } : {}}>
+  <div class="pointer-events-none absolute inset-0 -z-[1]" aria-hidden="true">
+    <slot name="bg">
+      {bg && <Fragment set:html={bg} />}
+    </slot>
+  </div>
+  <div class:list={[twMerge('relative mx-auto max-w-7xl px-4 text-default', containerClass)]}>
+    <slot />
+  </div>
+</section>

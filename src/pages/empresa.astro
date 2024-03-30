@@ -1,0 +1,111 @@
+---
+import { t, changeLanguage } from 'i18next';
+import { localizePath } from 'astro-i18next';
+
+import Layout from '~/layouts/PageLayout.astro';
+import HeroComponent from '~/components/widgets/HeroComponent.astro';
+import Trajectory from '~/components/widgets/Trajectory.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Team from '~/components/widgets/Team.astro';
+import Values from '~/components/widgets/Values.astro';
+import MissionVision from '~/components/widgets/MissionVision.astro';
+import ReverseContent from '~/components/widgets/ReverseContent.astro';
+
+import heroImage from '~/assets/images/oe-20.avif';
+import storyImage from '~/assets/images/oe-212.avif';
+import daniloImage from '~/assets/images/team/team-danilo.avif';
+import andresImage from '~/assets/images/team/team-andres.avif';
+import yorlenyImage from '~/assets/images/team/team-yorleny.avif';
+import carlosImage from '~/assets/images/team/team-carlos.avif';
+
+changeLanguage('es');
+
+const metadata = {
+  title: `${t('nav.link1')} - OceanExpress CR`,
+  description: t('about.meta.description'),
+  openGraph: {
+    basic: {
+      title: `${t('nav.link1')} - OceanExpress CR`,
+      type: 'article',
+      image: '/src/assets/images/defaultog.png',
+      description: t('about.meta.description'),
+    },
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroComponent section="about" image={{ src: heroImage.src, alt: 'team picture' }} />
+
+  <ReverseContent />
+
+  <Team
+    tagline={t('about.team.tagline')}
+    title={t('about.team.title')}
+    subtitle={t('about.team.subtitle')}
+    actions={{
+      open: t('about.team.actions.open'),
+      close: t('about.team.actions.close'),
+    }}
+    team={[
+      {
+        name: t('about.team.member1.name'),
+        job: t('about.team.member1.position'),
+        description: t('about.team.member1.bio'),
+        image: { src: daniloImage.src, alt: 'headshot' },
+      },
+      {
+        name: t('about.team.member2.name'),
+        job: t('about.team.member2.position'),
+        description: t('about.team.member2.bio'),
+        image: { src: andresImage.src, alt: 'headshot' },
+      },
+      {
+        name: t('about.team.member3.name'),
+        job: t('about.team.member3.position'),
+        description: t('about.team.member3.bio'),
+        image: { src: yorlenyImage.src, alt: 'headshot' },
+      },
+      {
+        name: t('about.team.member4.name'),
+        job: t('about.team.member4.position'),
+        description: t('about.team.member4.bio'),
+        image: { src: carlosImage.src, alt: 'headshot' },
+      },
+    ]}
+  />
+
+  <MissionVision />
+
+  <Values />
+
+  <Trajectory
+    image={{
+      src: storyImage.src,
+      alt: 'image of founders',
+    }}
+  >
+    <Fragment slot="title">{t('about.trajectory.title')}</Fragment>
+
+    <Fragment slot="content">
+      <p class="text-lg text-dark  mb-2 text-left" set:html={t('about.trajectory.text')} />
+    </Fragment>
+  </Trajectory>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: t('home.cta-box.button'),
+        href: localizePath('/contacto'),
+      },
+    ]}
+    classes={{
+      container: 'py-0',
+    }}
+  >
+    <Fragment slot="title">{t('home.cta-box.title')}</Fragment>
+
+    <Fragment slot="subtitle">{t('home.cta-box.subtitle')}</Fragment>
+  </CallToAction>
+</Layout>

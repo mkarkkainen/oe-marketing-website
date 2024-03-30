@@ -1,0 +1,182 @@
+---
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Button from '~/components/ui/Button.astro';
+import type { Testimonials } from '~/types';
+
+const {
+  title = '',
+  subtitle = '',
+  tagline = '',
+  testimonials = [],
+  callToAction,
+  id,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Testimonials;
+---
+
+<script is:inline>
+  let slideIndex = 0;
+  showSlides(slideIndex);
+
+  function moveSlide(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n - 1));
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName('carousel-images')[0].getElementsByClassName('testimonial');
+    let dots = document.getElementsByClassName('dot');
+    if (n >= slides.length) {
+      slideIndex = 0;
+    }
+    if (n < 0) {
+      slideIndex = slides.length - 1;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(' active', '');
+    }
+    slides[slideIndex].style.display = 'block';
+    dots[slideIndex].className += ' active';
+  }
+</script>
+
+<style>
+  .carousel {
+    position: relative;
+    max-width: 600px; /* Set the width of the carousel */
+    margin: auto;
+  }
+
+  .carousel-images .testimonial {
+    width: 100%;
+    display: none;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+  }
+
+  .prev {
+    left: -4rem;
+  }
+
+  .next {
+    right: -4rem;
+  }
+
+  .carousel-indicators {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+</style>
+
+<WidgetWrapper id={id} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+  <!-- Add a carousel -->
+
+  <section class="mx-auto w-full py-8">
+    <div id="carousel" class="carousel" aria-label="Image Carousel">
+      <div class="carousel-images">
+        {
+          testimonials.map(({ title, testimonial, name, job }) => (
+            <div class="testimonial flex h-auto" data-aos="fade-up-sm">
+              <div class="shadow1 flex flex-col rounded-md bg-slate-200 p-4 md:p-6">
+                {title && <h2 class="pb-4 text-lg font-medium leading-6">{title}</h2>}
+                {testimonial && (
+                  <blockquote class="flex-auto">
+                    <p class="text-lg text-muted">" {testimonial} "</p>
+                  </blockquote>
+                )}
+
+                <hr class="my-4 border-slate-200 " />
+
+                <div class="flex items-start">
+                  <div class="grow">
+                    {name && <p class="text-base font-semibold">{name}</p>}
+                    {job && <p class="text-lg text-muted">{job}</p>}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+        <!-- Add more images as needed -->
+      </div>
+      <button class="carousel-control prev" onclick="moveSlide(-1)" aria-label="Previous slide">&#10094;</button>
+      <button class="carousel-control next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
+      <div class="carousel-indicators">
+        <span class="dot" onclick="currentSlide(1)" aria-label="Slide 1"></span>
+        <span class="dot" onclick="currentSlide(2)" aria-label="Slide 2"></span>
+        <span class="dot" onclick="currentSlide(3)" aria-label="Slide 3"></span>
+        <span class="dot" onclick="currentSlide(4)" aria-label="Slide 3"></span>
+        <!-- Add more dots as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="mx-auto mt-12 grid max-w-4xl gap-6">
+    {
+      testimonials &&
+        testimonials.map(({ title, testimonial, name, job }) => (
+          <div class="flex h-auto" data-aos="fade-up-sm">
+            <div class="shadow1 flex flex-col rounded-md bg-slate-200 p-4 md:p-6">
+              {title && <h2 class="pb-4 text-lg font-medium leading-6">{title}</h2>}
+              {testimonial && (
+                <blockquote class="flex-auto">
+                  <p class="text-lg text-muted">" {testimonial} "</p>
+                </blockquote>
+              )}
+
+              <hr class="my-4 border-slate-200 " />
+
+              <div class="flex items-start">
+                <div class="grow">
+                  {name && <p class="text-base font-semibold">{name}</p>}
+                  {job && <p class="text-lg text-muted">{job}</p>}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+    }
+  </div> -->
+  {
+    callToAction && (
+      <div class="mx-auto mt-8 flex w-fit justify-center font-medium md:mt-12">
+        <Button {...callToAction} />
+      </div>
+    )
+  }
+</WidgetWrapper>

@@ -1,0 +1,33 @@
+---
+import WidgetWrapper from '../ui/WidgetWrapper.astro';
+import pcs from '~/assets/images/logos-socios/logo-pcs.svg';
+import dl from '~/assets/images/logos-socios/logo-dl.avif';
+import avianca from '~/assets/images/logos-socios/logo-avianca-rojo.avif';
+import rca from '~/assets/images/logos-socios/logo-rca-azul.svg';
+
+import { t } from 'i18next';
+---
+
+<section>
+  <WidgetWrapper containerClass={`max-w-7xl mx-auto }`}>
+    <div class="mb-8 max-w-7xl">
+      <h1 data-aos="fade-right-sm" class="flex flex-row items-start justify-start text-xl font-bold text-dark">
+        {t('home.brands')}
+      </h1>
+    </div>
+    <div data-aos="fade-up-sm" class="mx-auto flex flex-row items-center justify-center gap-8">
+      <div class="slide">
+        <img src={pcs.src} height="100" width="200" alt="logo pcs" />
+      </div>
+      <div class="slide">
+        <img src={dl.src} height="100" width="200" alt="logo dl" />
+      </div>
+      <div class="slide">
+        <img src={avianca.src} height="100" width="250" alt="logo avianca" />
+      </div>
+      <div class="slide">
+        <img src={rca.src} height="100" width="200" alt="logo rca" />
+      </div>
+    </div>
+  </WidgetWrapper>
+</section>

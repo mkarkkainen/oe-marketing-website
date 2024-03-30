@@ -1,0 +1,147 @@
+---
+import Logo from '~/components/Logo.astro';
+import ToggleMenu from '~/components/common/ToggleMenu.astro';
+import Button from '~/components/ui/Button.astro';
+import { t } from 'i18next';
+import { getHomePermalink } from '~/utils/permalinks';
+import { trimSlash } from '~/utils/permalinks';
+import type { CallToAction } from '~/types';
+import { localizePath } from 'astro-i18next';
+import { LanguageSelector } from 'astro-i18next/components';
+
+import { fade } from 'astro:transitions';
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+  index?: number;
+}
+
+interface ActionLink extends CallToAction {}
+
+interface MenuLink extends Link {
+  links?: Array<MenuLink>;
+  id?: number;
+}
+
+export interface Props {
+  id?: string;
+  links?: Array<MenuLink>;
+  actions?: Array<ActionLink>;
+  isSticky?: boolean;
+  isFullWidth?: boolean;
+  position?: string;
+}
+
+const { id = 'header', links = [], isSticky = false, isFullWidth = false, position = 'center' } = Astro.props;
+
+const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+---
+
+<style>
+  nav ul li .underline-active:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; /* Adjusted thickness */
+    bottom: -4px; /* Adjusted position */
+    left: 0;
+    background-color: var(--oe-color-primary-dark);
+    width: 96%;
+  }
+
+  nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; /* Adjusted thickness */
+    bottom: -4px; /* Adjusted position */
+    left: 0;
+    background-color: var(--oe-color-primary-dark);
+    transition: width 0.2s ease-out; /* Adjusted transition */
+  }
+
+  nav ul li a:hover::before {
+    width: 96%; /* Adjusted width to 80% */
+    transition: width 0.2s ease-in; /* Adjusted transition */
+  }
+</style>
+
+<header
+  transition:animate={fade({ duration: '0.5s' })}
+  class="fixed top-0 z-40 mx-auto w-full flex-none border-b border-gray-50/0 p-3 transition-[opacity] ease-in-out"
+  {...id ? { id } : {}}
+>
+  <div
+    class:list={[
+      'border-grey-300 shadow1 relative mx-auto w-full rounded-md border bg-white p-4 text-default md:backdrop-blur-md lg:flex lg:items-center lg:justify-between lg:px-6',
+      {
+        'max-w-7xl': !isFullWidth,
+      },
+    ]}
+  >
+    <div
+      class:list={[
+        { 'mr-auto': position === 'right' },
+        'flex basis-[15%] justify-between lg:basis-[25%] lg:justify-start',
+      ]}
+    >
+      <a class="flex items-center" href={getHomePermalink()} aria-label="Go to home page">
+        <Logo />
+      </a>
+      <div class="flex items-center lg:hidden">
+        <ToggleMenu />
+      </div>
+    </div>
+    <nav
+      class="grow-1 mt-8 hidden w-full items-center overflow-y-auto overflow-x-hidden text-default lg:mx-5 lg:mt-0 lg:flex lg:w-auto lg:overflow-x-auto lg:overflow-y-visible"
+      aria-label="Main navigation"
+    >
+      <ul
+        class="flex w-full flex-col gap-8 p-8 lg:p-0 text-2xl font-medium tracking-[0.01rem] lg:w-auto lg:flex-row lg:gap-0 lg:text-[17px] xl:gap-4"
+      >
+        {
+          links.map(({ href }, i) => (
+            <li class="my-1 px-3 xl:px-4">
+              <a
+                class:list={[
+                  'text-dark items-centers whitespace-no-wrap relative',
+                  { 'underline-active': localizePath(href) === localizePath(currentPath) },
+                ]}
+                href={localizePath(href)}
+              >
+                {t(`nav.link${i}`)}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div
+      class:list={[
+        { 'ml-auto ': position === 'left' },
+        'fixed bottom-0 left-0 hidden w-full shrink items-center justify-end p-3 lg:static lg:mb-0 lg:flex lg:w-auto lg:basis-[25%] lg:p-0',
+      ]}
+    >
+      <div class="flex w-full items-center justify-between lg:w-auto p-8 lg:p-0">
+        <div class="">
+          <span class="text-dark text-2xl lg:hidden">{t('nav.language')}:</span>
+          <LanguageSelector
+            class="text-dark bg-transparent p-2 text-2xl transition duration-150 ease-in hover:rounded-md hover:bg-slate-100 lg:text-[17px]"
+            languageMapping={{ es: '🇨🇷 Es', en: '🇺🇸 En' }}
+          />
+        </div>
+
+        <Button
+          text={t('nav.action')}
+          class="btn-primary ml-6 w-auto whitespace-nowrap px-5 py-2.5 font-semibold lg:px-6"
+          variant="btn-primary"
+          href={localizePath('/contacto')}
+          target="_blank"
+        />
+      </div>
+    </div>
+  </div>
+</header>

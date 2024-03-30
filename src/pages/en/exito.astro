@@ -1,0 +1,28 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "~/layouts/PageLayout.astro";
+import HeroComponent from "~/components/widgets/HeroComponent.astro";
+import Contact from "~/components/widgets/Contact.astro";
+import heroImage from "~/assets/images/oe-22.avif";
+
+changeLanguage("en");
+
+const metadata = {
+    title: "Ocean Express CR",
+    ignoreTitleTemplate: true,
+    description: "s",
+    openGraph: {
+        basic: {
+            title: `Privacy - OceanExpress CR`,
+            type: "article",
+            image: "/src/assets/images/defaultog.png",
+            description: "afaef",
+        },
+    },
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroComponent section="contact" image={{ src: heroImage.src, alt: 'team picture' }} />
+  <Contact />
+</Layout>

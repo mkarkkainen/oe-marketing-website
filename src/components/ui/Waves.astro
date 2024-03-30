@@ -1,0 +1,25 @@
+---
+import waves from '~/assets/images/vectors/waves.svg';
+---
+
+<style>
+  @media only screen and (min-width: 64em) {
+    #waves {
+      width: calc(100% - 100px);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @media only screen and (min-width: 0rem) {
+    #waves {
+      width: calc(100% - 60px);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+</style>
+
+<section id="waves" class="not-prose relative md:-mt-[76px]">
+  <img src={waves.src} alt="wavy lines" class="mx-auto -mb-4 h-auto w-full max-w-6xl md:-mb-8 md:max-w-[80rem]" />
+</section>

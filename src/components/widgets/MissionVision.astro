@@ -1,0 +1,43 @@
+---
+import Headline from '../ui/Headline.astro';
+import { t } from 'i18next';
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="bg-[#346385] py-clamp">
+  <Headline
+    position="center"
+    tagline={t('about.mv.tagline')}
+    title={t('about.mv.title')}
+    classes={{
+      container: 'max-w-6xl mx-auto flex flex-col justify-center px-8 py-8',
+      tagline: 'font-bold uppercase tracking-wide tagline-fs text-[#ffd199]',
+      title: 'font-heading font-bold tracking-loose text-white',
+      subtitle: 'text-white text-xl',
+    }}
+  />
+  <div class="mx-auto flex max-w-6xl flex-col px-8 pb-16 pt-8">
+    <div class="flex flex-col gap-8 md:flex-row md:gap-4">
+      <div class="flex w-full flex-row justify-start gap-4 md:w-1/2">
+        <div data-aos="fade-up-sm" class="hidden items-start justify-center md:flex">
+          <Icon class="pt-4" name="vision" width={50} height={50} />
+        </div>
+        <div>
+          <h2 data-aos="fade-up-sm" class="mb-2 text-2xl-c font-bold text-white">{t('about.mv.vision.title')}</h2>
+          <p data-aos="fade-up-sm" class="text-lg text-white">{t('about.mv.vision.subtitle')}</p>
+        </div>
+      </div>
+      <div class="flex w-full flex-row justify-start gap-4 md:w-1/2">
+        <div data-aos="fade-up-sm" class="hidden items-start justify-center md:flex">
+          <Icon class="pt-2" name="mission" width={50} height={50} />
+        </div>
+        <div class="">
+          <h2 data-aos="fade-up-sm" id="mission" class="relative mb-2 text-2xl-c font-bold text-white">
+            {t('about.mv.mission.title')}
+          </h2>
+          <p data-aos="fade-up-sm" class="text-lg text-white">{t('about.mv.mission.subtitle')}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

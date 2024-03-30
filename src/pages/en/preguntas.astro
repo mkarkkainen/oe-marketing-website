@@ -1,0 +1,92 @@
+---
+import { t, changeLanguage } from "i18next";
+import Layout from "~/layouts/PageLayout.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import HeroComponent from "~/components/widgets/HeroComponent.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import heroImage from "~/assets/images/oe351.avif";
+import { localizePath } from "astro-i18next";
+import Headline from "~/components/ui/Headline.astro";
+
+changeLanguage("en");
+
+const metadata = {
+    title: t("footer.resources.link2"),
+    description: t("faq.meta.description"),
+    openGraph: {
+        basic: {
+            title: `${t("footer.resources.link2")} - OceanExpress CR`,
+            type: "article",
+            image: "/src/assets/images/defaultog.png",
+            description: t("faq.meta.description"),
+        },
+    },
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroComponent section="faq" image={{ src: heroImage.src, alt: 'team members discussing' }} />
+  <div class="py-8">
+    <Headline subtitle={t('faq.subtitle')} />
+  </div>
+  <FAQs
+    columns={2}
+    classes={{}}
+    items={[
+      {
+        title: t('faq.question0.title'),
+        description: t('faq.question0.subtitle'),
+      },
+      {
+        title: t('faq.question1.title'),
+        description: t('faq.question1.subtitle'),
+      },
+      {
+        title: t('faq.question2.title'),
+        description: t('faq.question2.subtitle'),
+      },
+      {
+        title: t('faq.question3.title'),
+        description: t('faq.question3.subtitle'),
+      },
+      {
+        title: t('faq.question4.title'),
+        description: t('faq.question4.subtitle'),
+      },
+      {
+        title: t('faq.question5.title'),
+        description: t('faq.question5.subtitle'),
+      },
+      {
+        title: t('faq.question6.title'),
+        description: t('faq.question6.subtitle'),
+      },
+      {
+        title: t('faq.question7.title'),
+        description: t('faq.question7.subtitle'),
+      },
+    ]}
+  />
+
+  <CallToAction
+    classes={{
+      container: '-mt-[6rem]',
+      title: 'text-3xl font-bold text-[#346385]',
+      subtitle: 'text-[#23435A]',
+      actions: 'flex flex-col sm:flex-row',
+      action: 'w-full sm:w-auto',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: t('faq.cta.button'),
+        href: localizePath('/contacto'),
+        target: '_blank',
+      },
+    ]}
+  >
+    <Fragment slot="title">{t('faq.cta.title')}</Fragment>
+
+    <Fragment slot="subtitle">{t('faq.cta.subtitle')}</Fragment>
+  </CallToAction>
+</Layout>

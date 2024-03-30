@@ -1,0 +1,94 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import { changeLanguage, t } from "i18next";
+
+changeLanguage("es");
+
+const metadata = {
+    title: `${t("privacy.meta.title")} - OceanExpress CR`,
+    ignoreTitleTemplate: true,
+    description: t("privacy.meta.description"),
+    openGraph: {
+        basic: {
+            title: `${t("privacy.meta.title")} - OceanExpress CR`,
+            type: "article",
+            image: "/src/assets/images/defaultog.png",
+            description: t("privacy.meta.description"),
+        },
+    },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="mx-auto max-w-4xl px-4 pt-32">
+    <article class="flex flex-col items-start justify-start pt-20">
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.0.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.0.subtitle')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.1.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.1.subtitle')}
+      </p>
+      <p class="text-justify text-sm">
+        {t('privacy.1.subtitle2')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.2.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.2.subtitle')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.3.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.3.subtitle')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.4.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.4.subtitle')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.5.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.5.subtitle')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.6.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.6.subtitle')}
+      </p>
+      <p class="text-justify text-sm">
+        {t('privacy.6.subtitle2')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.7.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.7.subtitle')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.8.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.8.subtitle')}
+      </p>
+      <p class="text-justify text-sm">
+        {t('privacy.8.subtitle2')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.9.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.9.subtitle')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.10.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.10.subtitle')}
+      </p>
+      <p class="text-justify text-sm">
+        {t('privacy.10.subtitle2')}
+      </p>
+      <p class="text-justify text-sm">
+        {t('privacy.10.subtitle3')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.11.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.11.subtitle')}
+      </p>
+      <h4 class="mt-4 text-lg font-semibold">{t('privacy.12.title')}</h4>
+      <p class="text-justify text-sm">
+        {t('privacy.12.subtitle')}
+      </p>
+    </article>
+  </section>
+</Layout>

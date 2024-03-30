@@ -1,0 +1,54 @@
+{
+  "name": "oceanexpress",
+  "description": "OceanExpress: A logistics company that provides a wide range of services to meet your specific needs.",
+  "version": "1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier -w .",
+    "lint:eslint": "eslint . --ext .js,.ts,.astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.0.3",
+    "@fontsource-variable/inter": "^5.0.8",
+    "@iconify-json/tabler": "^1.1.102",
+    "aos": "^2.3.4",
+    "astro": "^4.0.6",
+    "astro-i18next": "^1.0.0-beta.21",
+    "astro-icon": "1.0.0-next.4",
+    "astro-seo": "^0.8.0",
+    "limax": "4.1.0",
+    "lodash.merge": "^4.6.2",
+    "unpic": "^3.10.0"
+  },
+  "devDependencies": {
+    "@astrojs/partytown": "^2.0.2",
+    "@astrojs/tailwind": "^5.0.3",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/aos": "^3.0.7",
+    "@types/lodash.merge": "^4.6.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "astro-compress": "^2.0.15",
+    "eslint": "^8.49.0",
+    "eslint-plugin-astro": "^0.29.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "js-yaml": "^4.1.0",
+    "mdast-util-to-string": "^4.0.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
+    "reading-time": "^1.5.0",
+    "sass": "^1.69.5",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.14.1"
+  }
+}

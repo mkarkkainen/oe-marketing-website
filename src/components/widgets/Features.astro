@@ -1,0 +1,102 @@
+---
+import ItemGrid from '~/components/ui/ItemGrid.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Button from '~/components/ui/Button.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { t } from 'i18next';
+import { twMerge } from 'tailwind-merge';
+import type { Features } from '~/types';
+import { localizePath } from 'astro-i18next';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+  items = [],
+  columns = 2,
+  defaultIcon,
+  action,
+  classes = {},
+  id,
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Features;
+---
+
+<script>
+  const ctabox = document.getElementById('cta');
+  const boxHeight = ctabox?.offsetHeight;
+  if (ctabox && boxHeight) {
+    ctabox.style.marginBottom = `-${boxHeight / 2}px`;
+  }
+</script>
+
+<style>
+  @media only screen and (min-width: 64em) {
+    #features {
+      width: calc(100% - 100px);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @media only screen and (min-width: 0rem) {
+    #features {
+      width: calc(100% - 60px);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+</style>
+
+<section id="features" class="not-prose relative mb-[18rem] scroll-mt-[72px] pt-8 md:mb-[10rem] md:pt-4">
+  <div class="pointer-events-none absolute inset-0 -z-[1]" aria-hidden="true">
+    <Fragment set:html={bg} />
+  </div>
+  <div class:list={[twMerge('relative mx-auto max-w-6xl px-4 py-0 text-default text-white')]}>
+    <div class="mx-auto max-w-6xl">
+      <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline} />
+    </div>
+    <ItemGrid
+      id={id}
+      items={items}
+      columns={columns}
+      defaultIcon={defaultIcon}
+      classes={{
+        container: 'md:max-w-[80rem] py-12',
+        title: 'md:text-[2rem] ',
+        icon: 'text-white bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4',
+        ...((classes?.items as {}) ?? {}),
+      }}
+    />
+
+    <div class="flex w-full flex-col items-center justify-center pb-[14rem] pt-[2rem] md:pb-[12rem]">
+      <Button href={localizePath('/servicios')} variant="tertiary" class="btn-primary">
+        {action}
+      </Button>
+    </div>
+
+    <div id="cta" class="z-100 absolute bottom-0 left-1/2 w-[90%] -translate-x-1/2 transform text-white md:w-[80%]">
+      <CallToAction
+        classes={{
+          container: '',
+          title: 'text-xl md:text-3xl font-bold text-[#346385]',
+          subtitle: 'text-[#23435A]',
+          actions: 'flex flex-col sm:flex-row',
+          action: 'w-full sm:w-auto',
+        }}
+        actions={[
+          {
+            variant: 'primary',
+            text: t('home.cta-box.button'),
+            href: localizePath('/contacto'),
+            target: '_blank',
+          },
+        ]}
+      >
+        <Fragment slot="title">{t('home.cta-box.title')}</Fragment>
+
+        <Fragment slot="subtitle">{t('home.cta-box.subtitle')}</Fragment>
+      </CallToAction>
+    </div>
+  </div>
+</section>

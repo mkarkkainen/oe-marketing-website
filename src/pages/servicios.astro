@@ -1,0 +1,93 @@
+---
+import { t, changeLanguage } from "i18next";
+import { localizePath } from "astro-i18next";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import HeroComponent from "~/components/widgets/HeroComponent.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import LogoCarousel from "~/components/widgets/LogoCarousel.astro";
+import Reviews from "~/components/widgets/Reviews.astro";
+import ServicesComponent from "~/components/widgets/ServicesComponent.astro";
+import heroImage from "~/assets/images/shipping.avif";
+
+changeLanguage('es');
+
+const metadata = {
+  title: t('nav.link2'),
+  description: t('services.meta.description'),
+  openGraph: {
+    basic: {
+      title: `${t('nav.link2')} - OceanExpress CR`,
+      type: 'article',
+      image: '/src/assets/images/defaultog.png',
+      description: t('services.meta.description'),
+    },
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroComponent section="services" image={{ src: heroImage, alt: 'container ship' }} />
+  <LogoCarousel />
+  <ServicesComponent />
+
+  <Reviews
+    reviews={[
+      {
+        name: t('services.testimonials.card0.name'),
+        job: t('services.testimonials.card0.description'),
+        testimonial: t('services.testimonials.card0.quote'),
+      },
+      {
+        name: t('services.testimonials.card1.name'),
+        job: t('services.testimonials.card1.description'),
+        testimonial: t('services.testimonials.card1.quote'),
+      },
+      {
+        name: t('services.testimonials.card2.name'),
+        job: t('services.testimonials.card2.description'),
+        testimonial: t('services.testimonials.card2.quote'),
+      },
+      {
+        name: t('services.testimonials.card3.name'),
+        job: t('services.testimonials.card3.description'),
+        testimonial: t('services.testimonials.card3.quote'),
+      },
+    ]}
+  />
+
+  <FAQs
+    tagline={t('services.faq.tagline')}
+    title={t('services.faq.title')}
+    columns={1}
+    action={t('services.faq.action')}
+    items={[
+      {
+        title: t('faq.question0.title'),
+        description: t('services.faq.question0.subtitle'),
+      },
+      {
+        title: t('faq.question1.title'),
+        description: t('services.faq.question1.subtitle'),
+      },
+      {
+        title: t('faq.question2.title'),
+        description: t('services.faq.question2.subtitle'),
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: t('home.cta-box.button'),
+        href: localizePath('/contacto'),
+      },
+    ]}
+  >
+    <Fragment slot="title">{t('home.cta-box.title')}</Fragment>
+
+    <Fragment slot="subtitle">{t('home.cta-box.subtitle')}</Fragment>
+  </CallToAction>
+</Layout>

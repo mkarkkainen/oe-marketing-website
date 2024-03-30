@@ -1,0 +1,95 @@
+---
+import '~/assets/styles/tailwind.css';
+import 'aos/dist/aos.css';
+
+import { I18N } from '~/utils/config';
+import { HeadHrefLangs } from 'astro-i18next/components';
+import CommonMeta from '~/components/common/CommonMeta.astro';
+import Favicons from '~/components/Favicons.astro';
+import CustomStyles from '~/components/CustomStyles.astro';
+import Metadata from '~/components/common/Metadata.astro';
+import SiteVerification from '~/components/common/SiteVerification.astro';
+
+import type { MetaData as MetaDataType } from '~/types';
+
+export interface Props {
+  metadata?: MetaDataType;
+}
+
+const { metadata = {} } = Astro.props;
+const { language, textDirection } = I18N;
+---
+
+<!doctype html>
+<html lang={language} dir={textDirection} class="2xl:text-[20px]">
+  <head>
+    <CommonMeta />
+    <Favicons />
+    <CustomStyles />
+    <Metadata {...metadata} />
+    <SiteVerification />
+    <HeadHrefLangs />
+  </head>
+
+  <body class="bg-page tracking-tight text-default antialiased" transition:animate="fade">
+    <slot />
+    <!-- aos -->
+    <script>
+      import { aosInit } from '~/utils/aos';
+      aosInit();
+      document.addEventListener('astro:after-swap', aosInit);
+    </script>
+
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+
+      /* aos custom */
+      [data-aos='scale-down-hero'] {
+        transform: scale(1);
+        border-radius: 0px;
+        transition-property: transform, border-radius;
+      }
+      [data-aos='scale-down-hero'].aos-animate {
+        transform: scale(0.933);
+        border-radius: 40px;
+      }
+      [data-aos='scale-up'] {
+        width: calc(100% - 100px);
+        transition-property: width;
+      }
+      [data-aos='scale-up'].aos-animate {
+        width: 100%;
+      }
+      [data-aos='fade-up-sm'] {
+        transform: translate3d(0, 12px, 0);
+        transition-property: transform;
+      }
+      [data-aos='fade-up-sm'].aos-animate {
+        transform: translate3d(0, 0, 0);
+      }
+      [data-aos='fade-down-sm'] {
+        transform: translate3d(0, -12px, 0);
+        transition-property: transform;
+      }
+      [data-aos='fade-down-sm'].aos-animate {
+        transform: translate3d(0, 0, 0);
+      }
+      [data-aos='fade-right-sm'] {
+        transform: translate3d(-16px, 0, 0);
+        transition-property: transform;
+      }
+      [data-aos='fade-right-sm'].aos-animate {
+        transform: translate3d(0, 0, 0);
+      }
+      [data-aos='fade-left-sm'] {
+        transform: translate3d(16px, 0, 0);
+        transition-property: transform;
+      }
+      [data-aos='fade-left-sm'].aos-animate {
+        transform: translate3d(0, 0, 0);
+      }
+    </style>
+  </body>
+</html>

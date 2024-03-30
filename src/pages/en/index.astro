@@ -1,0 +1,137 @@
+---
+import { t, changeLanguage } from "i18next";
+import Layout from "~/layouts/PageLayout.astro";
+import Waves from "~/components/ui/Waves.astro";
+import Features from "~/components/widgets/Features.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import SideBySide from "~/components/widgets/SideBySide.astro";
+import Services from "~/components/widgets/ServicesMin.astro";
+import HeroComponent from "~/components/widgets/HeroComponent.astro";
+import LogoCarousel from "~/components/widgets/LogoCarousel.astro";
+
+// Images
+import heroImage from "~/assets/images/oe-14.avif";
+import founderImg from "~/assets/images/oe-6.avif";
+import warehouseImage from "~/assets/images/warehouse.avif";
+import airplaneImage from "~/assets/images/airplane.avif";
+import deliveryImage from "~/assets/images/delivery.avif";
+
+changeLanguage("en");
+
+const metadata = {
+    title: "Ocean Express CR",
+    ignoreTitleTemplate: true,
+    description: t("site.description"),
+    openGraph: {
+        basic: {
+            title: `${t("nav.link0")} - OceanExpress CR`,
+            type: "article",
+            image: "/src/assets/images/defaultog.png",
+            description: t("site.description"),
+        },
+    },
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroComponent section="home" image={{ src: heroImage.src, alt: 'team members discussing' }} />
+
+  <LogoCarousel />
+
+  <SideBySide
+    tagline={t('home.company.tagline')}
+    title={t('home.company.title')}
+    description={t('home.company.subtitle')}
+    action={t('home.company.action')}
+    image={{ src: founderImg.src, alt: 'image of founder' }}
+  />
+
+  <Services
+    tagline={t('home.services.tagline')}
+    title={t('home.services.title')}
+    subtitle={t('home.services.subtitle')}
+    actions={[t('home.services.buttons.primary'), t('home.services.buttons.secondary')]}
+    services={[
+      {
+        title: t('home.services.card0.title'),
+        subtitle: t('home.services.card0.subtitle'),
+        image: {
+          src: airplaneImage.src,
+          alt: 'airport',
+        },
+      },
+      {
+        title: t('home.services.card1.title'),
+        subtitle: t('home.services.card1.subtitle'),
+        image: {
+          src: warehouseImage.src,
+          alt: 'warehouse',
+        },
+      },
+      {
+        title: t('home.services.card2.title'),
+        subtitle: t('home.services.card2.subtitle'),
+        image: {
+          src: deliveryImage.src,
+          alt: 'package delivery',
+        },
+      },
+    ]}
+  />
+
+  <Stats
+    classes={{
+      container: 'rounded-t-3xl	bg-gradient-to-b from-blue-200 via-white to-transparent',
+    }}
+    title={t('home.stats.title')}
+    stats={[
+      { title: t('home.stats.stat0'), amount: '20+' },
+      { title: t('home.stats.stat1'), amount: '100+' },
+      { title: t('home.stats.stat2'), amount: '15K+' },
+      { title: t('home.stats.stat3'), amount: '30' },
+    ]}
+  />
+
+  <Waves />
+
+  <Features
+    classes={{
+      container: 'max-w-6xl text-white py-0',
+      headline: {
+        title: 'max-w-4xl mx-auto',
+        container: 'mb-12',
+        tagline: 'font-bold text-[#ffd199] uppercase tracking-wide',
+      },
+      items: {
+        container: 'px-4 md:px-8',
+        description: 'text-base text-white text-left py-4 md:py-0 md:text-left',
+      },
+    }}
+    id="features"
+    action={t('home.features.action')}
+    tagline={t('home.features.tagline')}
+    title={t('home.features.title')}
+    items={[
+      {
+        title: t('home.features.card1.title'),
+        description: t('home.features.card1.subtitle'),
+      },
+      {
+        title: t('home.features.card2.title'),
+        description: t('home.features.card2.subtitle'),
+      },
+      {
+        title: t('home.features.card3.title'),
+        description: t('home.features.card3.subtitle'),
+      },
+      {
+        title: t('home.features.card4.title'),
+        description: t('home.features.card4.subtitle'),
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 mx-auto w-full max-w-6xl rounded-b-3xl bg-[#346385] md:max-w-[80rem]"></div>
+    </Fragment>
+  </Features>
+</Layout>

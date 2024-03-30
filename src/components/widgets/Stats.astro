@@ -1,0 +1,56 @@
+---
+import type { Stats } from '~/types';
+import Headline from '../ui/Headline.astro';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  stats = [],
+} = Astro.props as Stats;
+---
+
+<style>
+  @media only screen and (min-width: 64em) {
+    #stats {
+      width: calc(100% - 100px);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @media only screen and (min-width: 0rem) {
+    #stats {
+      width: calc(100% - 60px);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+</style>
+
+<section
+  id="stats"
+  class="not-prose relative mb-[4rem] scroll-mt-[72px] rounded-t-3xl bg-gradient-to-b from-blue-200 via-white to-transparent pt-16 md:mb-[10rem] md:max-w-[80rem]"
+>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+
+  <div class="mx-auto flex flex-row flex-wrap items-center justify-center pt-4 md:pt-16">
+    {
+      stats &&
+        stats.map(({ amount, title }) => (
+          <section class="w-full min-w-[220px] p-4 text-center sm:w-1/2 md:w-1/4 md:last:border-none ">
+            {amount && (
+              <figure class="mb-2 font-heading text-[2.125rem] font-bold text-dark lg:text-5xl xl:text-6xl">
+                <p data-aos="fade-up-sm">{amount}</p>
+              </figure>
+            )}
+            {title && (
+              <figure class="whitespace-nowrap text-[1rem] font-bold tracking-widest text-dark  md:text-lg ">
+                <p data-aos="fade-up-sm">{title}</p>
+              </figure>
+            )}
+          </section>
+        ))
+    }
+  </div>
+</section>

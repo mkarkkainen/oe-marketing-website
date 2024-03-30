@@ -1,0 +1,26 @@
+---
+import { t, changeLanguage } from "i18next";
+import Contact from "~/components/widgets/Contact.astro";
+import Hero from "~/components/widgets/HeroComponent.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import heroImage from "~/assets/images/oe-22.avif";
+
+changeLanguage("en");
+
+const metadata = {
+    title: t("nav.link3"),
+    openGraph: {
+        basic: {
+            title: `${t("nav.link3")} - OceanExpress CR`,
+            type: "article",
+            image: "/src/assets/images/defaultog.png",
+            description: t("contact.meta.description"),
+        },
+    },
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero section="contact" image={{ src: heroImage.src, alt: 'team picture' }} />
+  <Contact />
+</Layout>

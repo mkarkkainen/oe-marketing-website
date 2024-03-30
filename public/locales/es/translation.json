@@ -1,0 +1,480 @@
+{
+  "site": {
+    "title": "Ocean Express CR",
+    "description": "Ocean Express CR, una empresa comprometida con la prestación de servicios de transporte internacional de mercancías personalizados y de alta calidad."
+  },
+  "rights": "Todos los derechos reservados",
+  "language": "es-CR",
+  "nav": {
+    "link0": "Inicio",
+    "link1": "Empresa",
+    "link2": "Servicios",
+    "link3": "Contacto",
+    "language": "Idioma",
+    "action": "Solicitar Cotización"
+  },
+  "footer": {
+    "company": {
+      "title": "Sitio",
+      "link0": "Inicio",
+      "link1": "Empresa",
+      "link2": "Servicios",
+      "link3": "Contacto"
+    },
+    "resources": {
+      "title": "Soporte",
+      "link0": "Términos",
+      "link1": "Privacidad",
+      "link2": "Preguntas frecuentes"
+    },
+    "follow": "Síguenos"
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacidad",
+      "description": "Revisa nuestra Política de Privacidad para saber cómo recopilamos, utilizamos y protegemos tu información personal. Esta página describe nuestro compromiso con tu privacidad y la seguridad de los datos cuando utilizas nuestros servicios y sitio web."
+    },
+    "0": {
+      "title": "Información del Titular del Tratamiento de Datos",
+      "subtitle": "Ocean Express CR es la empresa responsable como razón social responsable del tratamiento de datos. Para cualquier comunicación, su dirección física está ubicada en la ficha de contacto del sitio web, y su correo electrónico es “info@oceanexpresscr.com”."
+    },
+    "1": {
+      "title": "Declaración General",
+      "subtitle": "Ocean Express CR respeta su derecho a la privacidad y no recopilará ninguna información personal sobre usted en este sitio web sin su permiso explícito. Cualquier dato personal que proporcione, si se retiene, se mantendrá en servidores seguros.",
+      "subtitle2": "La naturaleza de Internet es tal que no podemos garantizar ni asegurar la seguridad de ninguna información que nos transmita a través de Internet. No se puede garantizar que la transmisión de datos a través de Internet sea 100% segura. Sin embargo, tomaremos todas las medidas razonables (incluyendo medidas técnicas y organizativas apropiadas) para proteger sus datos personales."
+    },
+    "2": {
+      "title": "Tipo de datos recopilados y su finalidad",
+      "subtitle": "Ocean Express CR puede recopilar dos tipos de información sobre usted a partir de nuestros sitios: (a) Información personal que lo identifica o puede ser utilizada para identificarlo o contactarlo y puede incluir, su nombre, empresa o dirección de correo electrónico. Ocean Express CR no recopila ningún dato personal sobre usted en este sitio web, aparte de la información que usted proporcione voluntariamente (por ejemplo, enviándonos un correo electrónico o completando alguno de nuestros formularios en línea o registro voluntario para los servicios que Ocean Express CR ofrece). Si decide no proporcionar la información personal necesaria cuando se le solicite, ciertos servicios o partes de los sitios pueden no estar disponibles para usted. (b) Información agregada generada por los sistemas de Ocean Express CR, que, como la mayoría de los sitios web, rastrea el tráfico hacia y en los sitios pero no lo identifica personalmente."
+    },
+    "3": {
+      "title": "Uso de la información",
+      "subtitle": "Ocean Express CR puede utilizar la información que recopila: (a) para verificar su identidad y asistirlo en cualquiera de los servicios de registro de Ocean Express CR; (b) para ayudar en la prestación de los servicios solicitados por usted; (c) para proporcionarle más información sobre otros sitios web y servicios o que Ocean Express CR considere puedan ser de su interés; (d) para compartir con terceros que tengan objetivos similares (en todo o en parte) a Ocean Express CR cuando el intercambio sea para un propósito sin fines de lucro; (e) para futuras actividades de marketing, promoción y publicidad relacionadas con Ocean Express CR o su propósito, incluyendo la realización de marketing directo, invitaciones a eventos y actividades, investigación de mercado y encuestas; (f) para ayudar a asegurar que se le muestre información que la empresa considere relevante para usted y sus intereses; y (g) para cualquier otro uso que usted autorice."
+    },
+    "4": {
+      "title": "Consentimiento del Usuario",
+      "subtitle": "El consentimiento del usuario para recopilar y procesar sus datos personales se obtiene al visitar el sitio web, sin embargo su información personal o empresarial será sólo utilizada si el usuario decide contactar a la empresa para cualquier finalidad."
+    },
+    "5": {
+      "title": "Derechos del Usuario",
+      "subtitle": "Los usuarios tienen derechos en relación con sus datos, asimismo como el derecho de acceso, rectificación, cancelación y oposición (derechos ARCO). Si el usuario necesita modificar alguna línea de comunicación deberá enviar un correo electrónico a “info@oceanexpresscr.com”."
+    },
+    "6": {
+      "title": "Retención, corrección y actualización",
+      "subtitle": "Cualquier información personal que proporcione a Ocean Express CR será recopilada y mantenida por Ocean Express CR y/o sus agentes y asociados autorizados. La información recopilada será resguardada por la empresa por tiempo indefinido, o hasta que el cliente decida dar por terminada la relación profesional y lo solicite de forma explícita.",
+      "subtitle2": "Si usted es una persona física, tiene ciertos derechos bajo la 'LEY DE PROTECCIÓN DE LA PERSONA FRENTE AL TRATAMIENTO DE SUS DATOS PERSONALES. Ley N° 8968' que Costa Rica tiene. Corregiremos cualquier información personal que tengamos sobre usted si nos notifica por escrito la corrección. Si tiene alguna pregunta sobre cómo funcionan los servicios de Ocean Express CR o sobre esta Política de Privacidad, comuníquese con Ocean Express CR enviando un correo electrónico a “info@oceanexpresscr.com”."
+    },
+    "7": {
+      "title": "Seguridad de los Datos",
+      "subtitle": "Para proteger los datos personales de los usuarios, la empresa mantiene el código del sitio web dentro de un reservorio protegido por dos empresas, Github y Netlify, ambas resguardan los datos de la empresa. Además mediante el dominio propio de la empresa, resguardado con los filtros adecuados en GoDaddy, se genera una capa adicional. Los emails de la empresa se manejan a través de Gmail de Google. Ahí hay una capa adicional de protección de la información del usuario."
+    },
+    "8": {
+      "title": "Compartir Datos con Terceros",
+      "subtitle": "No divulgaremos sus datos personales con terceros a menos que usted haya consentido esta divulgación. Si el usuario realiza un proceso de compra de servicios con la empresa, puede ser que algunos de los datos personales, profesionales o empresariales se compartan con los socios comerciales para poder desarrollar el servicio pertinente.",
+      "subtitle2": "Podemos divulgar con su consentimiento: (a) cualquier información que Ocean Express CR recopile sobre usted a terceros con el fin de proporcionarle servicios que Ocean Express CR considere puedan ser de su interés; (b) información de seguimiento agregada y otra información que no lo identifique personalmente, a terceros; (c) su información personal a terceros, cuando Ocean Express CR crea de buena fe que estamos obligados a hacerlo por ley."
+    },
+    "9": {
+      "title": "Proveedores de contenido, anunciantes y socios",
+      "subtitle": "Ocean Express CR no controla las prácticas de los proveedores de contenido o socios presentes en nuestros sitios. Los sitios de nuestros socios contienen enlaces a otros sitios, que pueden no seguir las mismas políticas de privacidad que Ocean Express CR. Ocean Express CR sugiere que verifique cualquier política de privacidad relevante antes de proporcionar su información personal a cualquier tercero."
+    },
+    "10": {
+      "title": "Cookies y seguimiento",
+      "subtitle": "Las cookies del sitio web son pequeños archivos de texto que pueden colocarse en su computadora por los sitios web que visita. Son ampliamente utilizadas para hacer que los sitios web funcionen según lo previsto y mejorar la experiencia de los usuarios.",
+      "subtitle2": "Ocean Express CR no recopila información personal identificable a través de cookies de sitios web. Ocean Express CR puede utilizar un archivo de 'cookie' que contenga información que pueda identificar detalles de su dirección IP, plataforma de PC (por ejemplo, Windows, NT o Mac), navegador (por ejemplo, Internet Explorer, Firefox u otro, más la versión del navegador), dominio (ya sea que esté accediendo a un Sitio desde CR u otro lugar) y otra información del usuario (por ejemplo, su nombre de usuario).",
+      "subtitle3": "Ocean Express CR puede utilizar la información generada por las cookies para: (a) rastrear patrones de tráfico hacia, desde y en los Sitios; (b) ayudar a mostrar publicidad a los usuarios apropiados; y (c) permitirle ingresar a los Sitios y utilizar ciertos servicios y visitar áreas solo para usuarios registrados del Sitio. Puede elegir administrar sus cookies. La mayoría de los navegadores web permiten algún control de la mayoría de las cookies a través de la configuración del navegador. Para obtener más información sobre las cookies, incluido cómo ver qué cookies se han configurado y cómo administrarlas y eliminarlas, visite: http://www.aboutcookies.org/"
+    },
+    "11": {
+      "title": "Transferencias Internacionales",
+      "subtitle": "En caso de transferencias internacionales de datos fuera de Costa Rica, los datos de los usuarios se protegerán mediante los términos y condiciones, y la política y privacidad, de las empresas de nuestros socios comerciales con quienes ya se habrá acordado compartir los mismos. En caso de que haya una violación de los datos del usuario, Ocean Express CR acudirá a los estatutos legales donde nuestros códigos están almacenados. Si las mismas no resguardan los derechos del usuario, la empresa no se hace responsable."
+    },
+    "12": {
+      "title": "Cambios en la Política de Privacidad del Sitio Web",
+      "subtitle": "Cualquier cambio en esta Política de Privacidad del Sitio Web se publicará en este sitio web para que siempre esté informado de qué información recopilamos, cómo la utilizamos y bajo qué circunstancias, si las hay, la divulgamos."
+    },
+    "13": {
+      "title": "Contacto para consultas",
+      "subtitle": "Agradecemos comentarios y sugerencias sobre la política de privacidad de Ocean Express CR. Envíe cualquier pregunta sobre la misma o la información que hemos recopilado de usted a “info@oceanexpresscr.com”. Si cree que su información personal ha sido mal utilizada o manejada de manera contraria a la política establecida anteriormente, por favor contáctenos en “info@oceanexpresscr.com”."
+    },
+    "14": {
+      "title": "Varios",
+      "subtitle": "Esta Política y cualquier problema o disputa relacionados con preocupaciones de privacidad se regirán e interpretarán de acuerdo con las leyes de Costa Rica, sin tener en cuenta ninguna disposición de elección de ley. Esta Política de privacidad y los Términos y condiciones son el acuerdo completo entre las partes relacionadas con el uso del Sitio Web y la información personal recopilada por Ocean Express CR."
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Términos",
+      "description": "Explora nuestros Términos y Condiciones para comprender las reglas y pautas que rigen el uso de nuestros servicios y sitio web. Esta página ofrece información detallada sobre tus derechos y responsabilidades como usuario."
+    },
+    "0": {
+      "title": "Definiciones",
+      "subtitle": "Estos términos y condiciones reconocen:",
+      "li0": "Usuario(s): toda persona humana o no humana que acceda al sitio web para navegar, estudiar o comenzar una relación de cualquier índole con la empresa.",
+      "li1": "Empresa: se reconoce como empresa a Ocean Express CR.",
+      "li2": "Sitio: se entiende como la plataforma en línea que proporciona contenido o servicios accesibles a través de internet mediante navegadores web. El sitio en cuestión lo habilita el enlace “www.oceanexpresscr.com”."
+    },
+    "1": {
+      "title": "Declaración General",
+      "subtitle": "Estos términos y condiciones son aplicables a todos los usuarios del sitio. El acceso al sitio es gratuito y no genera ninguna relación comercial, contractual o profesional de ningún tipo entre los usuarios y Ocean Express CR, a no ser de que los usuarios decidan comenzar una relación comercial con la empresa. No obstante, si en el futuro se añaden nuevas secciones al sitio que ofrezcan servicios específicos, Ocean Express CR puede incluirlos en este documento como una sección adicional. ",
+      "subtitle2": "Cuando el sitio incluya acceso a testimonios para los usuarios, estos pueden expresar las opiniones o pensamientos profesionales y personales de quienes se convierten en clientes, sobre una amplia variedad de temas con respecto a los servicios prestados por la empresa. El contenido de estos testimonios y los enlaces incluidos en ellos a otros sitios externos, serán revisados, monitoreados o aprobados por la empresa, que es el editor de los contenidos de dichos testimonios, o de los sitios a los que se puede acceder a través de ellos. El texto, así como cualquier otro material publicado en estos, expresa la opinión de un autor específico y no la opinión de Ocean Express CR. Si cree por alguna razón que la información publicada es ofensiva, notifique a la Administración en info@oceanexpresscr.com. Los usuarios acuerdan no acceder o intentar acceder a la cuenta de otro usuario, y no falsificar o intentar falsificar su identidad mientras usan el sitio o cualquiera de los sistemas a los que tienen permiso de acceder.",
+      "subtitle3": "El usuario debe referirse a las condiciones específicas establecidas para el acceso y uso de servicios específicos dentro del Sitio Web de la marca Ocean Express CR, estas se detallan más adelante"
+    },
+    "2": {
+      "title": "Permiso para el uso de materiales",
+      "subtitle": "Como parte del acuerdo del usuario con los Términos y Condiciones contenidos aquí, en un futuro Ocean Express CR habilitará un acceso único (para aquellas secciones que lo requieran) que es personal e intransferible. Este pretenderá habilitar un espacio para manifestar su opinión profesional sobre nuestros servicios, y este mismo será revisado como se especifica anteriormente."
+    },
+    "3": {
+      "title": "Limitaciones de uso",
+      "subtitle": "El usuario se compromete a utilizar el Sitio sólo para fines legales. Como el usuario acepta los términos anteriores, si un tercero reclama que cualquier material publicado en el sitio es ilegal, el usuario será responsable de demostrar que el material en cuestión cumple con las leyes aplicables. Además, Ocean Express CR se reserva el derecho de eliminar material del sitio, bloquear el acceso o tomar cualquier otra acción respecto al material publicado, a su propia discreción, aunque no está obligado a hacerlo. El usuario no puede utilizar los recursos de datos de Ocean Express CR para distribuir publicidad no solicitada o cualquier material promocional de cualquier tipo."
+    },
+    "4": {
+      "title": "Hipervínculos",
+      "subtitle": "Este sitio contiene enlaces a sitios fuera del dominio de Ocean Express CR. Los respectivos titulares de estos sitios son responsables de los contenidos de sus sitios, y Ocean Express CR ni garantiza ni aprueba dicho contenido."
+    },
+    "5": {
+      "title": "Responsabilidades",
+      "subtitle": "Este sitio, así como cualquier información o servicios relacionados con él, se proporcionan 'tal cual', con la garantía de que la información es real y pertinente. Respecto a los sitios externos, Ocean Express CR rechaza cualquier garantía, ya sea expresa o implícita, sobre la exactitud, adecuación o integridad de un sitio, de la información obtenida en él, o del enlace. Ocean Express CR no garantiza que estos sitios funcionarán sin interrupciones o sin errores, o que estén libres de virus u otros componentes dañinos. El uso de la información obtenida a través de estos sitios se realiza bajo el propio riesgo del usuario. En particular, Ocean Express CR no asumirá responsabilidad por daños consecuenciales indirectos, punitivos, especiales, accidentales, previstos o imprevistos (incluyendo, pero no limitado a, demandas por difamación, errores, pérdida de datos o interrupción de la disponibilidad de datos), que estén relacionados con estos términos y condiciones, por el uso o la incapacidad de usar un sitio, por cualquier publicación que un usuario pueda hacer en el sitio, o por la fiabilidad de la información obtenida a través de un sitio. El usuario es responsable de cualquier daño y/o lesión de cualquier naturaleza que pueda surgir por el incumplimiento de estos términos y condiciones o de cualquier otra normativa aplicable, y como tal Ocean Express CR queda libre de toda responsabilidad administrativa, civil, penal o de cualquier otro tipo.",
+      "subtitle2": "En Costa Rica, los 'términos y condiciones' de un sitio web deben abordar diversos aspectos para cumplir con la legislación y proporcionar una guía clara para los usuarios. Algunos componentes importantes incluyen:"
+    },
+    "6": {
+      "title": "Privacidad",
+      "subtitle": "Este Sitio puede contener errores u omisiones en su información. OceanExpress CR se reserva el derecho de corregir estos errores u omisiones."
+    },
+    "7": {
+      "title": "Otros aspectos legales",
+      "subtitle": "Este sitio cumple con las leyes específicas de Costa Rica, como regulaciones comerciales y leyes de propiedad intelectual."
+    },
+    "8": {
+      "title": "Procedimientos legales",
+      "subtitle": "Este sitio, la empresa y los usuarios se rigen por las leyes costarricense. Por tanto, los procedimientos legales que se seguirán en caso de disputas o problemas legales, siguen los lineamientos propios del sistema legal de Costa Rica."
+    },
+    "9": {
+      "title": "Modificaciones",
+      "subtitle": "La empresa se reserva el derecho de realizar cambios en los términos y condiciones en el sitio, y notificar a los usuarios sobre tales modificaciones."
+    },
+    "10": {
+      "title": "Otros",
+      "subtitle": "Este sitio puede contener errores u omisiones en su información. Ocean Express CR se reserva el derecho de corregir estos errores u omisiones."
+    }
+  },
+  "404": {
+    "title": "Lo sentimos, no hemos podido encontrar esta página.",
+    "subtitle": "Pero no se preocupe, puede encontrar muchas otras cosas en nuestra página web.",
+    "action": "Volver a la página de inicio"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Ocean Express CR",
+      "title": "Transportamos su carga marítima, aérea y terrestre",
+      "subtitle": "Dedicada a bridar un servicio completamente personalizado.",
+      "action": {
+        "primary": "Cotizar",
+        "secondary": "Leer más"
+      }
+    },
+    "brands": "Conozca a algunos de nuestros socios:",
+    "company": {
+      "tagline": "Empresa",
+      "title": "Servicio personalizado: una historia de más de 20 años",
+      "subtitle": "Nos dedicamos a brindar un servicio personalizado y de gran calidad en transporte internacional de carga. Asesoramos a nuestros clientes en la exportación e importación de sus mercaderías, guiándolos para que tomen la mejor decisión: <b>segura, económica y adaptada</b> a sus necesidades. Además, contamos con servicio aduanal y de nacionalización de cargas, así como envíos de paquetería.",
+      "action": "Sabér Más"
+    },
+    "services": {
+      "tagline": "Servicios",
+      "title": "Dedicación a la excelencia y el servicio",
+      "subtitle": "En Ocean Express CR, nos especializamos en soluciones de transporte internacional de carga a su medida. Con una red global de socios de confianza y un enfoque en el servicio personalizado, garantizamos que sus envíos lleguen a su destino con cuidado y eficiencia.",
+      "card0": {
+        "title": "Transporte internacional de carga",
+        "subtitle": "Brindamos soluciones integrales de transporte aéreo, marítimo y terrestre, desde y hacia cualquier parte del mundo, conectando Costa Rica con el comercio global."
+      },
+      "card1": {
+        "title": "Nacionalización de mercadería",
+        "subtitle": "Optimizamos tiempos y recursos aduanales, permitiéndole una transición sin complicaciones desde la llegada de la carga a los almacenes fiscales costarricenses hasta su destino final."
+      },
+      "card2": {
+        "title": "Servicios de paquetería",
+        "subtitle": "Ofrecemos servicios especializados de paquetería para envíos de menor volumen, garantizando un manejo cuidadoso y entregas puntuales, adaptándonos a sus necesidades logísticas."
+      },
+      "buttons": {
+        "primary": "Cotizar",
+        "secondary": "Leer más"
+      }
+    },
+    "stats": {
+      "title": "Nuestra experiencia en cifras",
+      "stat0": "Años de servicio",
+      "stat1": "Clientes atendidos",
+      "stat2": "Entregas realizadas",
+      "stat3": "Países enlazados"
+    },
+    "features": {
+      "tagline": "¿Por qué elegirnos?",
+      "title": "Priorizamos su satisfacción y comodidad con nuestro compromiso con un servicio personalizado.",
+      "card1": {
+        "title": "Asesoramiento experto",
+        "subtitle": "Con más de dos décadas en el mercado, hemos asesorado a innumerables clientes, brindando soluciones personalizadas que optimizan sus procesos de logística internacional."
+      },
+      "card2": {
+        "title": "Seguimiento de sus envíos",
+        "subtitle": "Cada día, supervisamos y actualizamos el estado de múltiples envíos, garantizando que su mercadería se mueva con el menor contratiempo desde su origen hasta su destino, manteniéndole informado en el proceso."
+      },
+      "card3": {
+        "title": "Flexibilidad a sus requisitos",
+        "subtitle": "En un mundo de negocios en constante evolución, nuestra flexibilidad se traduce en ajustar nuestros servicios según sus necesidades, asegurando un flujo continuo de mercadería."
+      },
+      "card4": {
+        "title": "Respuesta ágil",
+        "subtitle": "Nuestra estructura, personal y procesos eficientes nos permiten responder con rapidez a sus consultas y requerimientos, brindando soluciones oportunas para satisfacer sus demandas logísticas."
+      },
+      "action": "Aprenda más sobre nuestros servicios"
+    },
+
+    "cta-box": {
+      "title": "¿Desea ponerse en contacto?",
+      "subtitle": "No dude en contactarnos con cualquier pregunta o consulta que tenga; nos aseguraremos de responderle rápidamente.",
+      "button": "Cotizar"
+    }
+  },
+
+  "about": {
+    "meta": {
+      "description": "Descubre cómo nuestra empresa de logística se destaca en servicio personalizado para envíos internacionales, despacho de aduanas y servicios de paquetería. Garantizamos soluciones logísticas eficientes, confiables y a medida de tus necesidades. Experimenta un envío global sin complicaciones con nosotros."
+    },
+    "hero": {
+      "tagline": "Ocean Express CR",
+      "title": "Acerca de Nosotros",
+      "subtitle": "Nos especializamos en soluciones a su medida, respaldados por una red global de socios de confianza y un enfoque inquebrantable en el servicio personalizado."
+    },
+    "tagline": "Empresa",
+    "title": "Lo que nos diferencia",
+    "subtitle": "En Ocean Express CR, nuestra dedicación va más allá de simplemente mover carga: ofrecemos un <b>servicio personalizado</b>. Trabajamos en las necesidades logísticas de nuestros clientes, ofreciendo excelencia en todo lo que hacemos con más de 20 años de trayectoria. También buscamos inspirar a nuestros colaboradores y socios comerciales a dar lo mejor cada día. Por eso nos destacamos en el mercado costarricense y a nivel global.",
+    "box": "Más de 20 años de experiencia",
+    "bullet0": "Compromiso personalizado: Brindamos un servicio adaptado a las necesidades específicas de cada cliente, garantizando asesoramiento experto y atención personalizada en cada etapa del proceso logístico.",
+    "bullet1": "Experiencia y trayectoria: Con más de 20 años en el mercado, buscamos crecer globalizando nuestra empresa y ofrecer un servicio personalizado, sirviendo a las necesidades logísticas de nuestros clientes. Ofrecemos oportunidades para el desarrollo personal y el éxito.",
+    "bullet2": "Red global de conexiones: Nuestra extensa red de socios confiables a nivel mundial nos permite asegurar un transporte seguro y oportuno desde y hacia diversos países, cumpliendo con estándares de calidad exigentes.",
+    "team": {
+      "tagline": "Empresa",
+      "title": "Nuestro Equipo",
+      "subtitle": "Conoce a nuestro equipo de profesionales dedicados",
+      "member1": {
+        "name": "Danilo Moreira Ramírez",
+        "position": "Co-fundador & presidente",
+        "bio": "Como co-fundador y presidente de Ocean Express CR, Danilo lidera la empresa desde sus inicios en 2004. Él monitorea las finanzas, el personal de la empresa y coordina todo lo relacionado con ventas y operaciones. Ve la importancia en proveer un servicio personalizado hacia los clientes, y mantiene  que esto no podría lograrse sin la ayuda de sus colaboradores. Ha aprendido a liderar con humildad, y hoy sostiene que su equipo brinda una cercanía profesional única."
+      },
+      "member2": {
+        "name": "Andrés Zumbado Castillo",
+        "position": "Ejecutivo de ventas",
+        "bio": "Andrés colabora con nosotros desde 2015. Hoy es el ejecutivo de ventas y operaciones en Ocean Express CR. Con el paso del tiempo, ha aprendido y llegado a tener la experiencia necesaria para poder manejar cualquier situación con dedicada atención hacia los clientes, nuevos o existentes, en sus necesidades de transporte internacional de mercaderías. Él cree que las oportunidades de mercado son muchas, por lo que la búsqueda de nuevos retos y oportunidades le parece muy atractiva."
+      },
+      "member3": {
+        "name": "Yorleny Alfaro Jiménez",
+        "position": "Contadora general",
+        "bio": "Yorleny colabora en la empresa como contadora general y analista financiera. Trabaja con nosotros desde el 2014, y sus funciones abarcan desde la revisión, análisis y registro de los diferentes documentos comerciales, hasta el análisis de la situación financiera de la empresa. Disfruta ver cómo su experiencia se va enriqueciendo con los cambios en las diferentes contabilidades. Su vasta experiencia en Ocean Express CR le ha sido muy satisfactoria, especialmente por la complejidad que conllevan los cambios financieros"
+      },
+      "member4": {
+        "name": "Carlos Moreira Álvarez",
+        "position": "Consultor de proyectos",
+        "bio": "Carlos decidió sumarse al equipo de trabajo de la empresa familiar en 2023. Hoy colabora como un consultor externo en coordinación de proyectos. Sus funciones son diversas: gestión de proyectos, innovación digital, optimización del trabajo y apoyo en gestión de talento humano, entre otras. Carlos se apasiona por estudiar y mejorar los procesos y relaciones existentes. A través de las ciencias sociales brinda una perspectiva fresca en negociaciones a la empresa."
+      },
+      "actions": {
+        "open": "Biografía",
+        "close": "Salir"
+      }
+    },
+    "mv": {
+      "tagline": "Empresa",
+      "title": "Nuestra misión & visión",
+      "subtitle": "Conoce a nuestro equipo de profesionales dedicados",
+      "mission": {
+        "title": "Misión",
+        "subtitle": "Buscamos ofrecer soluciones logísticas personalizadas y excelencia en cada servicio, inspirando un desarrollo óptimo en colaboradores y socios al crecer globalmente."
+      },
+      "vision": {
+        "tagline": "Empresa",
+        "title": "Visión",
+        "subtitle": "Ser líderes e innovadores en el mercado de servicios de logística, facilitando el comercio internacional para las Pymes en Costa Rica, con transparencia y eficiencia."
+      },
+      "values": {
+        "tagline": "Empresa",
+        "title": "Valores",
+        "subtitle": "Nuestros valores son la esencia de nuestra forma de trabajar, reflejando lo mejor de Ocean Express CR",
+        "value0": {
+          "title": "Pasión",
+          "text": "Potenciamos nuestro servicio al comprometernos con cada tarea, dedicando corazón y mente para cumplir nuestra misión y visión."
+        },
+        "value1": {
+          "title": "Lealtad",
+          "text": "Establecemos alianzas sólidas y un fuerte compromiso con proveedores, clientes y con nosotros mismos para brindar el mejor servicio posible."
+        },
+        "value2": {
+          "title": "Calidad",
+          "text": "Trabajamos en cada tarea de forma eficiente, rápida y personalizada en busca constante de la excelencia para nuestros clientes."
+        },
+        "value3": {
+          "title": "Responsabilidad",
+          "text": "Procuramos garantizar el éxito en la entrega puntual de la mercadería a nuestros clientes."
+        }
+      }
+    },
+    "trajectory": {
+      "tagline": "Empresa",
+      "title": "Nuestra trayectoria",
+      "text": "Ocean Express CR, forjada por Danilo y Teresita en medio de dificultades económicas, surgió en 2004, prosperando durante el auge marítimo. La experiencia gerencial de Danilo ha definido nuestra travesía logística global, mientras que Teresita desempeñó un papel clave durante 15 años hasta su jubilación en 2022. Muchos colaboradores enriquecieron nuestro camino, y alianzas estratégicas en servicios terrestres y aéreos mejoraron nuestras operaciones globales. Nuestro impacto también se refleja en nuestro compromiso con la Responsabilidad Social Empresarial: apoyo a la educación, pasantías y donaciones a ONGs y la Cruz Roja Costarricense. Ofreciendo servicio personalizado y adaptándonos a la era digital, Ocean Express es más que una empresa; es un viaje de superación, compromiso social y adaptación constante a las demandas digitales, siempre guiados por sólidos valores y un servicio diferenciado."
+    }
+  },
+  "services": {
+    "meta": {
+      "description": "Explora nuestra amplia gama de servicios logísticos: envíos internacionales, despacho de aduanas, entrega de paquetes y más. Nos especializamos en ofrecer soluciones logísticas a medida y eficientes para empresas e individuos. Asóciate con nosotros para todas tus necesidades de envío."
+    },
+    "hero": {
+      "tagline": "Ocean Express CR",
+      "title": "Nuestros Servicios",
+      "subtitle": "Transportamos con éxito su carga internacional desde el punto de origen hasta el destino elegido."
+    },
+
+    "service0": {
+      "tagline": "Servicios",
+      "title": "Transporte internacional de carga",
+      "subtitle": "Nos enorgullece presentarles este servicio, donde ofrecemos soluciones integrales que cubren <b>transporte aéreo, marítimo y terrestre</b> conectando Costa Rica con el comercio global. Movilizamos su mercadería de manera segura y eficaz, ofreciendo procesos de desconsolidación eficientes y reduciendo tiempos de espera y costos innecesarios. Transportamos su carga desde su ingreso a las bodegas en el país de origen y su traslado hasta el destino final. Nuestros puntos fuertes incluyen:",
+      "bullet0": "Conexiones globales: Gracias a nuestra red de asociados en todo el mundo, ofrecemos acceso a rutas y destinos globales, conectando su mercadería con mercados internacionales clave.",
+      "bullet1": "Garantía de cuidado y eficiencia: Cuidamos su mercadería como si fuera nuestra, con eficiencia en cada etapa del proceso logístico, desde la recolección hasta la entrega. Ofrecemos un seguro opcional.",
+      "bullet2": "Experiencia en carga diversa: Desde mercadería frágil hasta contenedores completos, estamos equipados para manejar una amplia gama de envíos, adaptando nuestras soluciones a sus necesidades específicas."
+    },
+    "service1": {
+      "tagline": "Servicios",
+      "title": "Nacionalización de mercadería",
+      "subtitle": "Este servicio está diseñado para ofrecerle al cliente un servicio personalizado puerta a puerta. Tras haber transportado y desconsolidado su carga, a través del servicio aduanal podemos nacionalizar su mercadería, con todos los <b>procesos fiscales</b> que esto implica en Costa Rica. Atendemos con esmero la llegada y el proceso en el almacén fiscal costarricense, para luego entregar la mercadería en la puerta de su negocio o lugar de preferencia. Nuestros puntos fuertes incluyen:",
+      "bullet0": "Rapidez en el trámite de aduanas: Procuramos un servicio transparente de 24h de entrega de su mercadería después de su ingreso al almacén fiscal costarricense.",
+      "bullet1": "Clasificación fiscal de mercaderías: Como especialistas en clasificación del código arancelario del sistema aduanero costarricense, resguardamos sus finanzas para evitar cargos adicionales.",
+      "bullet2": "Costo accesible: Posicionamos nuestras Tarifas competitivamente con el resto del mercado, al destacarnos ofreciendo un servicio hecho a su medida."
+    },
+    "service2": {
+      "tagline": "Servicios",
+      "title": "Servicios de paquetería",
+      "subtitle": "Nuestros servicios de paquetería están diseñados para satisfacer sus necesidades logísticas en envíos de menor volumen, a un menor precio y con mayor agilidad en la entrega. Nuestro equipo maneja cuidadosamente sus <b>compras digitales</b>, y hacemos entregas puntuales asegurando que sus envíos más pequeños reciban la misma atención y profesionalismo, desde el casillero hasta su lugar de preferencia. Nuestros puntos fuertes incluyen:",
+      "bullet0": "Envíos puntuales: Garantizamos entregas precisas y a tiempo, incluso para envíos de menor volumen, procurando que sus artículos lleguen sin contratiempos hasta su puerta.",
+      "bullet1": "Cuidado personalizado: Cada paquete se maneja con el mismo nivel de cuidado y atención que cualquier carga mayor, brindándole tranquilidad en cada entrega.",
+      "bullet2": "Flexibilidad en tamaños: Desde pequeños paquetes hasta envíos de mayor tamaño, estamos preparados para adaptarnos a sus requisitos y ofrecer soluciones personalizadas."
+    },
+    "testimonials": {
+      "tagline": "Servicios",
+      "title": "Testimonios",
+      "subtitle": "Nuestra mejor referencia es el apoyo de nuestros clientes y socios.",
+      "card0": {
+        "description": "Importadora de Autobuses y Repuestos Villalobos y Sánchez S.R.L.",
+        "name": "Luis Christian Villalobos, Propietario",
+        "quote": "Nosotros hemos tenido la oportunidad de trabajar con Ocean Express CR por más de 20 años, tiempo en el cual hemos desarrollado una relación de trabajo y amistad muy valiosa. Siempre hemos valorado y agradecido el buen servicio, el excelente trato y el profesionalismo con que nos han ayudado a crecer, brindándonos muy buenas tarifas y asesoría en la logística de importación."
+      },
+      "card1": {
+        "description": "Optocontrol JIBF S.A.",
+        "name": "Oscar Villalobos, Gerente General",
+        "quote": "Nuestra empresa ha adquirido los servicios desde hace muchos años. Comenzando hace mucho con el servicio de exportación, hoy hemos negociado: la importación de la carga, y la nacionalización de las mercaderías. Por lo cual, nos hemos convertido en unos excelentes socios comerciales. Ocean Express CR sigue siendo de nuestra confianza, ya que nos han brindado más allá de un gran servicio y dedicación de lo que nuestra empresa requiera."
+      },
+      "card2": {
+        "description": "ZGS Plastic Solutions",
+        "name": "Denis Zúniga, Director General",
+        "quote": "Como Director de la empresa, no puedo más que reconocer la atención brindada por Ocean Express CR, y su personal. Se esmeran por brindar el mejor servicio de su parte, además de entender las necesidades particulares de nuestra empresa, y buscar soluciones que se ajusten mejor a esas necesidades. Esperamos continuar y estrechar más aún las relaciones entre nuestras empresas en las áreas de servicio aduanero, gestión de fletes y seguros internacionales, y la asesoría que nos brindan en muchos otros aspectos relacionados con las anteriores mencionadas."
+      },
+      "card3": {
+        "description": "Sistema Empresarial RC S.A.",
+        "name": "Eddie Jiménez, Departamento Financiero Contable",
+        "quote": "Nuestra relación con Ocean Express CR, nace hace más de 20 años, tiempo donde nos han asesorado y colaborado, con todos los trámites de importación desde las diferentes partes del mundo. Ese es un trabajo que han desempeñado siempre con profesionalismo, puntualidad y siempre pensando en el bienestar de la empresa que represento, por tanto, estamos seguros que esta relación seguirá por muchos años más."
+      }
+    },
+    "faq": {
+      "tagline": "Servicios",
+      "title": "Preguntas frecuentes",
+      "question0": {
+        "title": "¿Ofrecen servicio puerta a puerta?",
+        "subtitle": "Sí, en Ocean Express CR proporcionamos un servicio integral puerta a puerta, asegurando que su mercadería sea recogida desde su ubicación de origen y entregada en su destino final de manera segura y oportuna."
+      },
+      "question1": {
+        "title": "¿Ofrecen servicio de agencia aduanal?",
+        "subtitle": "Sí, Ocean Express CR brinda servicio de agencia aduanal, facilitando los trámites y procesos necesarios para el despacho de su mercadería a través de las aduanas costarricenses."
+      },
+      "question2": {
+        "title": "¿De qué países transportan mercadería?",
+        "subtitle": "Ofrecemos transporte de carga desde y hacia diversos países alrededor del mundo, garantizando una red global de conexiones para satisfacer sus necesidades logísticas internacionales. Nuestro servicio de transporte abarca todos los países, menos los que están en alto conflicto internacional."
+      },
+      "action": "¿Más preguntas?"
+    }
+  },
+  "contact": {
+    "meta": {
+      "description": "Ponte en contacto con nuestros expertos en logística para obtener apoyo personalizado en envíos internacionales, despacho de aduanas y servicios de paquetería. Contáctanos hoy para soluciones logísticas eficientes y un servicio al cliente excepcional. Estamos aquí para ayudar con todas tus necesidades de envío."
+    },
+    "hero": {
+      "tagline": "Ocean Express CR",
+      "title": "Contacto Empresarial",
+      "subtitle": "Nuestra prioridad es brindarle un servicio eficiente y a su medida. "
+    },
+    "title": "Contactenos",
+    "subtitle": "A través de esta sección, le ofrecemos una vía directa para conectarse con nosotros. Ya sea que tenga preguntas, consultas o necesite asesoramiento personalizado, nuestro equipo de expertos está listo para atender sus necesidades. Su satisfacción es nuestra prioridad, y estamos aquí para ayudarle a impulsar su logística internacional.",
+    "form": {
+      "title": "Envíenos Un Mensaje",
+      "subtitle": "Nos encantaría atenderle. Por favor envíenos un mensaje y nos pondremos en contacto con usted."
+    },
+    "name": "Nombre",
+    "phone": "Teléfono",
+    "email": "Correo electronico",
+    "location": "Dirección física",
+    "message": "Mensaje",
+    "action": "Enviar",
+    "placeholder": {
+      "name": "Juan Pérez",
+      "phone": "+506 8512-1120",
+      "email": "jperez@xmail.com",
+      "message": "Por favor, proporcione aquí detalles sobre su consulta o comentario aquí."
+    }
+  },
+  "faq": {
+    "meta": {
+      "description": "Encuentra respuestas a tus preguntas logísticas en nuestras Preguntas Frecuentes. Aprende sobre envíos internacionales, despacho de aduanas, servicios de paquetería y más. Nuestra sección completa de FAQs ofrece perspectivas y soluciones a tus desafíos de envío. Visítanos ahora para obtener orientación experta."
+    },
+    "hero": {
+      "tagline": "Ocean Express CR",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "En Ocean Express CR, valoramos la claridad y la transparencia en nuestra comunicación con nuestros clientes."
+    },
+
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Explorar esta sección para obtener respuestas a sus inquietudes y aprovechar al máximo nuestros servicios de transporte y logística. Si no encuentra la respuesta que necesita, no dude en contactarnos; estamos aquí para ayudarle.",
+
+    "question0": {
+      "title": "¿Ofrecen servicio puerta a puerta?",
+      "subtitle": "Sí, en Ocean Express CR proporcionamos un servicio integral puerta a puerta, asegurando que su mercadería sea recogida desde su ubicación de origen y entregada en su destino final de manera segura y oportuna."
+    },
+    "question1": {
+      "title": "¿Ofrecen servicio de agencia aduanal?",
+      "subtitle": "Sí, Ocean Express CR brinda servicio de agencia aduanal, facilitando los trámites y procesos necesarios para el despacho de su mercadería a través de las aduanas costarricenses."
+    },
+    "question2": {
+      "title": "¿De qué países transportan mercadería? ",
+      "subtitle": "Ofrecemos transporte de carga desde y hacia diversos países alrededor del mundo, garantizando una red global de conexiones para satisfacer sus necesidades logísticas internacionales. Nuestro servicio de transporte abarca todos los países, menos los que están en alto conflicto internacional."
+    },
+    "question3": {
+      "title": "¿Cuál es el tiempo de tránsito marítimo desde Miami a Costa Rica?",
+      "subtitle": "El tiempo de tránsito marítimo desde Miami (USA) hacia Costa Rica varía según la ruta y el tipo de servicio. Nuestro equipo le brindará información precisa sobre el tiempo estimado para su envío en particular."
+    },
+    "question4": {
+      "title": "¿Cuál es el tiempo de tránsito aéreo de Miami a Costa Rica?",
+      "subtitle": "El tiempo de tránsito aéreo desde Miami (USA) hacia Costa Rica varía según la aerolínea y la ruta específica. Nuestro equipo le proporcionará información detallada basada en su envío."
+    },
+    "question5": {
+      "title": "¿Pueden recoger cargas en la ubicación del proveedor? ",
+      "subtitle": "Sí, brindamos el servicio de recolección de cargas en la ubicación de su proveedor, facilitando el proceso y asegurando una logística eficiente desde el origen hasta la entrega final."
+    },
+    "question6": {
+      "title": "¿Cómo debe entregarse la carga?",
+      "subtitle": "La carga debe entregarse debidamente embalada y preparada para el transporte. Nuestro equipo puede brindar orientación sobre los requisitos específicos para garantizar una entrega exitosa."
+    },
+    "question7": {
+      "title": "¿Cómo se calcula el cubicaje de una carga?",
+      "subtitle": "El cubicaje de una carga se calcula multiplicando la longitud, el ancho y la altura de la carga, todas las dimensiones en metros. Nuestro equipo le asistirá en este proceso para asegurar la precisión en la medición."
+    },
+    "cta": {
+      "title": "¿Tiene más preguntas?",
+      "subtitle": "No dude en contactarnos con cualquier pregunta o consulta que tenga; nos aseguraremos de responderle rápidamente.",
+      "button": "Enviar mensaje"
+    }
+  }
+}

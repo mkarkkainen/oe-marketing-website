@@ -1,0 +1,50 @@
+---
+import Headline from '../ui/Headline.astro';
+import Button from '../ui/Button.astro';
+import { fade } from 'astro:transitions';
+import { localizePath } from 'astro-i18next';
+
+const { title = await Astro.slots.render('title'), tagline, description, action, image } = Astro.props;
+---
+
+<style>
+  #pic {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+</style>
+
+<section class="overflow-hidden py-8 md:p-clamp" transition:animate={fade({ duration: '0.5s' })}>
+  <!-- container -->
+  <div
+    class="m-auto flex w-full max-w-[34.375rem] flex-col items-center rounded-xl bg-linear1 px-8 pb-8 md:max-w-[80rem] md:flex-row md:items-stretch md:justify-between md:gap-8 md:rounded-e-xl md:px-8 md:py-0"
+  >
+    <div
+      class="mr-auto flex w-full max-w-[33.875rem] flex-col items-start gap-8 text-left md:self-center md:px-0 md:py-[3.75rem]"
+    >
+      <Headline position="start" tagline={tagline} title={title} subtitle={description} />
+      <Button href={localizePath('/empresa')} set:html={action} />
+    </div>
+    <!-- image side -->
+    <div
+      data-aos="fade-left-sm"
+      data-aos-anchor-placement="top-center"
+      class="img-wrapper z-1 relative block w-[95%] md:flex-none"
+    >
+      <picture class="oe-picture" id="pic">
+        <source media="(max-width: 600px)" srcset={image.src} />
+
+        <source media="(min-width: 601px)" srcset={image.src} />
+        <img
+          alt={image.alt}
+          class="shadow1 absolute left-0 top-0 h-full w-full rounded-lg object-cover"
+          loading="lazy"
+          decoding="async"
+          width={500}
+          height={552}
+          src={image.src}
+        />
+      </picture>
+    </div>
+    <!-- content side -->
+  </div>
+</section>

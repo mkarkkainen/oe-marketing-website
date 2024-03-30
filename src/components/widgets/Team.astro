@@ -1,0 +1,78 @@
+---
+import type { Team } from '~/types';
+import WidgetWrapper from '../ui/WidgetWrapper.astro';
+import Headline from '../ui/Headline.astro';
+import Image from '~/components/common/Image.astro';
+import Button from '../ui/Button.astro';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  actions = {},
+  team = [],
+  id,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Team;
+---
+
+<WidgetWrapper id={id} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} classes={{ container: 'pb-8' }} />
+  <div class="flex flex-wrap justify-center">
+    {
+      team &&
+        team.map(({ name, job, image, description }) => (
+          <>
+            <dialog
+              class="inset-0 block translate-y-10 overflow-clip rounded-md border border-neutral-400 bg-slate-200 opacity-0 transition-[opacity,transform] duration-200 backdrop:backdrop-blur-sm [&:not([open])]:pointer-events-none [&[open]]:translate-y-0 [&[open]]:opacity-100"
+              id={`${name?.split(' ')[0]}`}
+            >
+              <div class="mx-auto my-8 flex flex-col items-center justify-center px-5">
+                <div class="max-w-2xl text-left">
+                  <h2 class="mb-2 text-4xl font-bold text-primary" set:html={name} />
+
+                  <p class="mb-8 text-2xl font-semibold md:text-3xl" set:html={job} />
+                  <p class="mb-8 text-justify text-lg	 text-muted" set:html={description} />
+                  <button class="btn btn-secondary" onclick={`${name?.split(' ')[0]}.close()`}>
+                    {actions.close}
+                  </button>
+                </div>
+              </div>
+            </dialog>
+            <div
+              onclick={`${name?.split(' ')[0]}.showModal()`}
+              data-aos="fade-up-sm"
+              class="group flex w-full min-w-[220px] cursor-pointer flex-col items-center justify-between p-4  sm:w-1/2 md:w-1/2 md:items-center lg:w-1/4"
+            >
+              {image && (
+                <Image
+                  height={360}
+                  width={272}
+                  src={image.src}
+                  alt={image.alt}
+                  class:list={[
+                    'shadow1 mb-4 rounded-md transition-[transform] duration-200 group-hover:-translate-y-1 md:mb-8 ',
+                  ]}
+                />
+              )}
+
+              {job && (
+                <div class="h-[2rem] flex-grow text-center font-heading text-sm font-bold uppercase tracking-[0.08125rem] text-dark md:h-[3rem]">
+                  {job}
+                </div>
+              )}
+              {title && <div class="mb-4 text-center text-[1.2rem] font-medium text-dark">{name}</div>}
+              <span class="">
+                <Button
+                  class="font-semibold text-dark  underline transition duration-300 ease-in-out group-hover:text-blue-700"
+                  variant="link"
+                  set:html={actions.open}
+                />
+              </span>
+            </div>
+          </>
+        ))
+    }
+  </div>
+</WidgetWrapper>

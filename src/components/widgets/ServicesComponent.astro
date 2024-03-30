@@ -1,0 +1,453 @@
+---
+import { t } from 'i18next';
+import Headline from '../ui/Headline.astro';
+import Button from '../ui/Button.astro';
+import airportImage from '~/assets/images/airplane.avif';
+import warehouseImage from '~/assets/images/warehouse.avif';
+import deliveryImage from '~/assets/images/delivery.avif';
+import { localizePath } from 'astro-i18next';
+
+const service1 = {
+  bullet1: {
+    title: t('services.service0.bullet0').split(':')[0],
+    text: t('services.service0.bullet0').split(':')[1],
+  },
+  bullet2: {
+    title: t('services.service0.bullet1').split(':')[0],
+    text: t('services.service0.bullet1').split(':')[1],
+  },
+  bullet3: {
+    title: t('services.service0.bullet2').split(':')[0],
+    text: t('services.service0.bullet2').split(':')[1],
+  },
+};
+
+const service2 = {
+  bullet1: {
+    title: t('services.service1.bullet0').split(':')[0],
+    text: t('services.service1.bullet0').split(':')[1],
+  },
+  bullet2: {
+    title: t('services.service1.bullet1').split(':')[0],
+    text: t('services.service1.bullet1').split(':')[1],
+  },
+  bullet3: {
+    title: t('services.service1.bullet2').split(':')[0],
+    text: t('services.service1.bullet2').split(':')[1],
+  },
+};
+
+const service3 = {
+  bullet1: {
+    title: t('services.service2.bullet0').split(':')[0],
+    text: t('services.service2.bullet0').split(':')[1],
+  },
+  bullet2: {
+    title: t('services.service2.bullet1').split(':')[0],
+    text: t('services.service2.bullet1').split(':')[1],
+  },
+  bullet3: {
+    title: t('services.service2.bullet2').split(':')[0],
+    text: t('services.service2.bullet2').split(':')[1],
+  },
+};
+---
+
+<style>
+  img.card-image {
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+</style>
+
+
+<!-- FIRST SERVICE -->
+<section class="SBSservices">
+  <div class="cs-container">
+    <picture class="cs-picture" data-aos="fade-right">
+      <source media="(max-width: 600px)" srcset={airportImage.src} />
+      <source media="(min-width: 601px)" srcset={airportImage.src} />
+      <img
+        loading="lazy"
+        class="card-image"
+        decoding="async"
+        src={airportImage.src}
+        alt="airplane"
+        width="586"
+        height="690"
+      />
+    </picture>
+    <div class="cs-content">
+      <div data-aos="fade-up">
+        <Headline
+          position="start"
+          tagline={t('services.service0.tagline')}
+          title={t('services.service0.title')}
+          subtitle={t('services.service0.subtitle')}
+          classes={{
+            subtitle: 'text-xl',
+          }}
+        />
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <div class="wrapper">
+            <span class="cs-item-number">01</span>
+            <h3 class="cs-h3">{service1.bullet1.title}</h3>
+          </div>
+          <p class="cs-item-text">
+            {service1.bullet1.text}
+          </p>
+        </li>
+        <li class="cs-item">
+          <div class="wrapper">
+            <span class="cs-item-number">02</span>
+            <h3 class="cs-h3">{service1.bullet2.title}</h3>
+          </div>
+          <p class="cs-item-text">
+            {service1.bullet2.text}
+          </p>
+        </li>
+        <li class="cs-item">
+          <div class="wrapper">
+            <span class="cs-item-number">03</span>
+            <h3 class="cs-h3">{service1.bullet3.title}</h3>
+          </div>
+          <p class="cs-item-text">
+            {service1.bullet3.text}
+          </p>
+        </li>
+      </ul>
+      <Button
+        data-aos="fade-up-sm"
+        href={localizePath('/contacto')}
+        variant="primary"
+        set:html={t('home.services.buttons.primary')}
+      />
+    </div>
+  </div>
+</section>
+
+<!-- SECOND SERVICE -->
+<section class="SBSservicesr overflow-x-hidden">
+  <div class="cs-container">
+    <picture class="cs-picture" data-aos="fade-left">
+      <source media="(max-width: 600px)" srcset={warehouseImage.src} />
+
+      <source media="(min-width: 601px)" srcset={warehouseImage.src} />
+      <img
+        class="card-image"
+        loading="lazy"
+        decoding="async"
+        src={warehouseImage.src}
+        alt="warehouse"
+        width="586"
+        height="690"
+      />
+    </picture>
+    <div class="cs-content">
+      <div data-aos="fade-up-sm">
+        <Headline
+          position="start"
+          tagline={t('services.service1.tagline')}
+          title={t('services.service1.title')}
+          subtitle={t('services.service1.subtitle')}
+          classes={{
+            subtitle: 'text-xl',
+          }}
+        />
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <div class="wrapper">
+            <span class="cs-item-number">01</span>
+            <h3 class="cs-h3">{service2.bullet1.title}</h3>
+          </div>
+          <p class="cs-item-text">
+            {service2.bullet1.text}
+          </p>
+        </li>
+        <li class="cs-item">
+          <div class="wrapper">
+            <span class="cs-item-number">02</span>
+            <h3 class="cs-h3">{service3.bullet2.title}</h3>
+          </div>
+          <p class="cs-item-text">
+            {service2.bullet2.text}
+          </p>
+        </li>
+        <li class="cs-item">
+          <div class="wrapper">
+            <span class="cs-item-number">03</span>
+            <h3 class="cs-h3">{service3.bullet3.title}</h3>
+          </div>
+          <p class="cs-item-text">
+            {service2.bullet3.text}
+          </p>
+        </li>
+      </ul>
+      <Button
+        data-aos="fade-up-sm"
+        href={localizePath('/contacto')}
+        variant="primary"
+        set:html={t('home.services.buttons.primary')}
+      />
+    </div>
+  </div>
+</section>
+
+<!-- THIRD SERVICE -->
+<section class="SBSservices">
+  <div class="cs-container">
+    <picture class="cs-picture" data-aos="fade-right">
+      <!--Mobile Image-->
+      <source media="(max-width: 600px)" srcset={deliveryImage.src} />
+      <!--Tablet and above Image-->
+      <source media="(min-width: 601px)" srcset={deliveryImage.src} />
+      <img
+        class="card-image"
+        loading="lazy"
+        decoding="async"
+        src={deliveryImage.src}
+        alt="package delivery"
+        width="586"
+        height="690"
+      />
+    </picture>
+    <div class="cs-content">
+      <div>
+        <Headline
+          position="start"
+          tagline={t('services.service2.tagline')}
+          title={t('services.service2.title')}
+          subtitle={t('services.service2.subtitle')}
+          classes={{
+            subtitle: 'text-xl',
+          }}
+        />
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <div class="wrapper">
+            <span class="cs-item-number">01</span>
+            <h3 class="cs-h3">{service3.bullet1.title}</h3>
+          </div>
+          <p class="cs-item-text">
+            {service3.bullet1.text}
+          </p>
+        </li>
+        <li class="cs-item">
+          <div class="wrapper">
+            <span class="cs-item-number">02</span>
+            <h3 class="cs-h3">{service3.bullet2.title}</h3>
+          </div>
+          <p class="cs-item-text">
+            {service3.bullet2.text}
+          </p>
+        </li>
+        <li class="cs-item">
+          <div class="wrapper">
+            <span class="cs-item-number">03</span>
+            <h3 class="cs-h3">{service3.bullet3.title}</h3>
+          </div>
+          <p class="cs-item-text">
+            {service3.bullet3.text}
+          </p>
+        </li>
+      </ul>
+      <Button
+        data-aos=""
+        href={localizePath('/contacto')}
+        variant="primary"
+        set:html={t('home.services.buttons.primary')}
+      />
+    </div>
+  </div>
+</section>
+<style>
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    .SBSservices,
+    .SBSservicesr {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+    }
+    .SBSservices .cs-container,
+    .SBSservicesr .cs-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: 36.5rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(2.5rem, 6vw, 4rem);
+    }
+    .SBSservices .cs-picture,
+    .SBSservicesr .cs-picture {
+      width: 100%;
+      height: clamp(25rem, 80vw, 47rem);
+      display: block;
+      position: relative;
+    }
+    .SBSservices .cs-picture img,
+    .SBSservicesr .cs-picture img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .SBSservices .cs-content,
+    .SBSservicesr .cs-content {
+      text-align: left;
+      width: 100%;
+      max-width: 39.375rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .SBSservices .cs-card-group,
+    .SBSservicesr .cs-card-group {
+      width: 100%;
+      /* 550px - 630px */
+      max-width: clamp(34.375rem, 50vw, 29.375rem);
+      padding: 0;
+      /* 24px - 40px */
+      margin: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(1.75rem, 4vw, 2.5rem) 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: clamp(1rem, 4vw, 2.5rem);
+    }
+    .SBSservices .cs-item,
+    .SBSservicesr .cs-item {
+      list-style: none;
+      /* prevents padding from affecting height and width */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .SBSservices .wrapper,
+    .SBSservicesr .wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.625rem;
+    }
+    .SBSservices .cs-item-number,
+    .SBSservicesr .cs-item-number {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--oe-color-primary);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .SBSservices .cs-h3,
+    .SBSservicesr .cs-h3 {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--oe-color-primary-dark);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .SBSservices .cs-item-text,
+    .SBSservicesr .cs-item-text {
+      font-size: 1rem;
+      line-height: 1.5em;
+      font-weight: 600;
+      margin: 0;
+      color: var(--oe-color-primary-dark);
+    }
+    .SBSservices .cs-ul,
+    .SBSservicesr .cs-ul {
+      width: 100%;
+      margin: 0 0 1.5rem 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .SBSservices .cs-li,
+    .SBSservicesr .cs-li {
+      font-size: var(--bodyFontSize);
+      list-style: none;
+      line-height: 1.5em;
+      width: 100%;
+      color: var(--oe-color-primary-dark);
+      display: flex;
+      justify-content: flex-start;
+      /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    .SBSservices .cs-container,
+    .SBSservicesr .cs-container {
+      max-width: 80rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    .SBSservices .cs-content,
+    .SBSservicesr .cs-content {
+      width: 50%;
+      max-width: 39.375rem;
+      /* prevents flexbox from squishing it */
+      flex: none;
+    }
+    .SBSservices .cs-card-group,
+    .SBSservicesr .cs-card-group {
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .SBSservices .cs-item,
+    .SBSservicesr .cs-item {
+      grid-column: span 6;
+    }
+    .SBSservices .cs-picture,
+    .SBSservicesr .cs-picture {
+      height: auto;
+      min-height: 32.8125rem;
+    }
+  }
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    .SBSservices .cs-content,
+    .SBSservicesr .cs-content {
+      padding: 5.25rem 0;
+      align-self: center;
+    }
+  }
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    .SBSservicesr {
+      background-color: #f7f7f7;
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    .SBSservicesr .cs-picture {
+      order: 2;
+    }
+  }
+</style>
