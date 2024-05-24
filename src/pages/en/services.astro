@@ -1,14 +1,14 @@
 ---
-import { t, changeLanguage } from "i18next";
-import { localizePath } from "astro-i18next";
-import CallToAction from "~/components/widgets/CallToAction.astro";
-import FAQs from "~/components/widgets/FAQs.astro";
-import HeroComponent from "~/components/widgets/HeroComponent.astro";
 import Layout from "~/layouts/PageLayout.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import { t, changeLanguage } from "i18next";
+import heroImage from "~/assets/images/shipping.avif";
+import FAQs from "~/components/widgets/FAQs.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Services from "~/components/widgets/Services.astro";
+import { localizePath } from "astro-i18next";
 import LogoCarousel from "~/components/widgets/LogoCarousel.astro";
 import Reviews from "~/components/widgets/Reviews.astro";
-import ServicesComponent from "~/components/widgets/ServicesComponent.astro";
-import heroImage from "~/assets/images/shipping.avif";
 
 changeLanguage("en");
 
@@ -27,9 +27,9 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <HeroComponent section="services" image={{ src: heroImage, alt: 'container ship' }} />
+  <Hero section="services" image={{ src: heroImage.src, alt: 'container ship' }} />
   <LogoCarousel />
-  <ServicesComponent />
+  <Services />
 
   <Reviews
     reviews={[

@@ -1,9 +1,9 @@
 ---
 import { t } from 'i18next';
-import { Icon } from 'astro-icon/components';
 import Headline from '../ui/Headline.astro';
-import Image from '~/components/common/Image.astro';
 import img1 from '~/assets/images/oe-15.avif';
+import { Icon } from 'astro-icon/components';
+import Image from '~/components/common/Image.astro';
 
 const item1 = { title: t('about.bullet0').split(':')[0].trim(), text: t('about.bullet0').split(':')[1].trim() };
 const item2 = { title: t('about.bullet1').split(':')[0].trim(), text: t('about.bullet1').split(':')[1].trim() };
@@ -12,7 +12,7 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
 
 <section id="about">
   <div
-    class="max-width-[36.5rem] m-auto flex w-full flex-col items-center px-4 lg:max-w-[80rem] lg:items-center lg:justify-between"
+    class="max-width-[36.5rem] m-auto flex w-full flex-col items-center lg:max-w-[80rem] lg:items-center lg:justify-between"
   >
     <div class="flex w-full max-w-4xl flex-col items-start">
       <Headline
@@ -27,17 +27,15 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
 
       <div class="relative mx-auto w-full max-w-4xl">
         <Image class="shadow-m rounded-lg" data-aos="fade-up-sm" src={img1} alt="dude" />
-        <div data-aos="fade-left-sm" class="cs-box">
-          <span class="cs-desc">{t('about.box')}</span>
+        <div data-aos="fade-left-sm" class="box">
+          <span class="desc">{t('about.box')}</span>
         </div>
       </div>
 
       <ul class="mx-auto mb-6 grid w-full max-w-2xl items-center gap-6 pt-16">
         <li
           data-aos="fade-left-sm"
-          data-aos-offset="200"
           data-aos-easing="ease-in-sine"
-          data-aos-duration="600"
           class="item shadow1 box-border flex flex-col items-start gap-3 rounded-md bg-[#eff8ff]"
         >
           <h3 class="m-0 flex items-center justify-start gap-2 text-xl font-bold leading-5">
@@ -48,10 +46,8 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
           <p class="text-md leading-7" set:html={item1.text} />
         </li>
         <li
-          data-aos="fade-left"
-          data-aos-offset="200"
+          data-aos="fade-left-sm"
           data-aos-easing="ease-in-sine"
-          data-aos-duration="600"
           class="item shadow1 box-border flex flex-col items-start gap-3 rounded-md bg-[#eff8ff]"
         >
           <h3 class="m-0 flex items-center justify-start gap-2 text-xl font-bold leading-5">
@@ -62,10 +58,8 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
           <p class="text-md leading-7">{item2.text}</p>
         </li>
         <li
-          data-aos="fade-left"
-          data-aos-offset="200"
+          data-aos="fade-left-sm"
           data-aos-easing="ease-in-sine"
-          data-aos-duration="600"
           class="item shadow1 box-border flex flex-col items-start gap-3 rounded-md bg-[#eff8ff]"
         >
           <h3 class="m-0 flex items-center justify-start gap-2 text-xl font-bold leading-5">
@@ -80,7 +74,6 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
   </div>
 </section>
 <style>
-  /* Mobile - 360px */
   @media only screen and (min-width: 0rem) {
     #about {
       padding: var(--sectionPadding);
@@ -89,19 +82,17 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
       z-index: 1;
     }
 
-    #about .cs-container {
+    #about .container {
       width: 100%;
-      /* changes to 1280px at desktop */
       max-width: 36.5rem;
       margin: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* 48px - 64px */
       gap: clamp(3rem, 6vw, 4rem);
     }
 
-    #about .cs-content {
+    #about .content {
       text-align: left;
       width: 100%;
       max-width: 39.375rem;
@@ -118,22 +109,22 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
       padding: clamp(1rem, 3vw, 1.5rem);
     }
 
-    #about .cs-image-group {
+    #about .image-group {
       border-radius: clamp(0.75rem, 4vw, 1.25rem);
     }
-    #about .cs-background {
+    #about .background {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    #about .cs-background img {
+    #about .background img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    #about .cs-box {
+    #about .box {
       text-align: center;
 
       max-width: 19rem;
@@ -146,17 +137,15 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
       align-items: flex-start;
       gap: 1.5rem;
       position: absolute;
-      /* 12px - 20px */
       right: clamp(0.75rem, 1.9vw, 1.5rem);
-      /* 12px - 20px */
       bottom: clamp(0.75rem, 1.9vw, 1.5rem);
     }
-    #about .cs-box-icon {
+    #about .box-icon {
       width: 3.75rem;
       height: auto;
       display: block;
     }
-    #about .cs-desc {
+    #about .desc {
       font-size: 0.75rem;
       line-height: 1.2em;
       text-align: inherit;
@@ -166,30 +155,27 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
       color: var(--bodyTextColorWhite);
     }
     @media only screen and (min-width: 24rem) {
-      #about .cs-box {
+      #about .box {
         text-align: left;
         max-width: 19rem;
         padding: 1rem;
         box-sizing: border-box;
         background-color: var(--oe-color-primary);
-        /* 48px - 80px */
         border-radius: 2rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
         position: absolute;
-        /* 12px - 20px */
         right: clamp(0.75rem, 1.9vw, 1.5rem);
-        /* 12px - 20px */
         bottom: clamp(0.75rem, 1.9vw, 1.5rem);
       }
-      #about .cs-box-icon {
+      #about .box-icon {
         width: 3.75rem;
         height: auto;
         display: block;
       }
-      #about .cs-desc {
+      #about .desc {
         font-size: 1rem;
         line-height: 1.2em;
         text-align: inherit;
@@ -200,21 +186,22 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
       }
     }
 
-    /* Small Desktop - 1024px */
     @media only screen and (min-width: 64rem) {
-      #about .cs-container {
+      #about .container {
         max-width: 80rem;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
       }
-      #about .cs-image-group {
+      #about .image-group {
+        /* sends it to the right in the 2nd position */
       }
-      #about .cs-box {
+      #about .box {
         text-align: left;
         width: 100%;
         max-width: 19rem;
         padding: 2rem;
+        /* prevents padding from affecting height and width */
         box-sizing: border-box;
         background-color: var(--oe-color-primary);
         /* 48px - 80px */
@@ -229,12 +216,12 @@ const item3 = { title: t('about.bullet2').split(':')[0].trim(), text: t('about.b
         /* 12px - 20px */
         bottom: clamp(0.75rem, 1.9vw, 1.5rem);
       }
-      #about .cs-box-icon {
+      #about .box-icon {
         width: 3.75rem;
         height: auto;
         display: block;
       }
-      #about .cs-desc {
+      #about .desc {
         font-size: 1.25rem;
         line-height: 1.2em;
         text-align: inherit;

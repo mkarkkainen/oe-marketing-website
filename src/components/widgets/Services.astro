@@ -1,73 +1,411 @@
 ---
+import { t } from 'i18next';
 import Headline from '../ui/Headline.astro';
-import Button from '~/components/ui/Button.astro';
-import type { ServicesMin } from '~/types';
-import Image from '~/components/common/Image.astro';
+import Button from '../ui/Button.astro';
+import airportImage from '~/assets/images/airplane.avif';
+import warehouseImage from '~/assets/images/warehouse.avif';
+import deliveryImage from '~/assets/images/delivery.avif';
 import { localizePath } from 'astro-i18next';
 
-const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  tagline = await Astro.slots.render('tagline'),
-  actions = [],
-  services = [],
-} = Astro.props as ServicesMin;
+const service1 = {
+  bullet1: {
+    title: t('services.service0.bullet0').split(':')[0],
+    text: t('services.service0.bullet0').split(':')[1],
+  },
+  bullet2: {
+    title: t('services.service0.bullet1').split(':')[0],
+    text: t('services.service0.bullet1').split(':')[1],
+  },
+  bullet3: {
+    title: t('services.service0.bullet2').split(':')[0],
+    text: t('services.service0.bullet2').split(':')[1],
+  },
+};
+
+const service2 = {
+  bullet1: {
+    title: t('services.service1.bullet0').split(':')[0],
+    text: t('services.service1.bullet0').split(':')[1],
+  },
+  bullet2: {
+    title: t('services.service1.bullet1').split(':')[0],
+    text: t('services.service1.bullet1').split(':')[1],
+  },
+  bullet3: {
+    title: t('services.service1.bullet2').split(':')[0],
+    text: t('services.service1.bullet2').split(':')[1],
+  },
+};
+
+const service3 = {
+  bullet1: {
+    title: t('services.service2.bullet0').split(':')[0],
+    text: t('services.service2.bullet0').split(':')[1],
+  },
+  bullet2: {
+    title: t('services.service2.bullet1').split(':')[0],
+    text: t('services.service2.bullet1').split(':')[1],
+  },
+  bullet3: {
+    title: t('services.service2.bullet2').split(':')[0],
+    text: t('services.service2.bullet2').split(':')[1],
+  },
+};
 ---
+
+<!-- FIRST SERVICE -->
+<section class="SBSservices">
+  <div class="container">
+    <picture class="service-picture" data-aos="fade-right-sm">
+      <source media="(max-width: 600px)" srcset={airportImage.src} />
+      <source media="(min-width: 601px)" srcset={airportImage.src} />
+      <img
+        loading="lazy"
+        class="card-image"
+        decoding="async"
+        src={airportImage.src}
+        alt="airplane"
+        width="586"
+        height="690"
+      />
+    </picture>
+    <div class="content">
+      <Headline
+        position="start"
+        tagline={t('services.service0.tagline')}
+        title={t('services.service0.title')}
+        subtitle={t('services.service0.subtitle')}
+        classes={{
+          subtitle: 'text-xl',
+        }}
+      />
+      <ul class="card-group">
+        <li data-aos="fade-left-sm" class="item">
+          <div class="wrapper">
+            <span class="item-number">01</span>
+            <h3 class="h3">{service1.bullet1.title}</h3>
+          </div>
+          <p class="item-text">
+            {service1.bullet1.text}
+          </p>
+        </li>
+        <li data-aos="fade-left-sm" class="item">
+          <div class="wrapper">
+            <span class="item-number">02</span>
+            <h3 class="h3">{service1.bullet2.title}</h3>
+          </div>
+          <p class="item-text">
+            {service1.bullet2.text}
+          </p>
+        </li>
+        <li data-aos="fade-left-sm" class="item">
+          <div class="wrapper">
+            <span class="item-number">03</span>
+            <h3 class="h3">{service1.bullet3.title}</h3>
+          </div>
+          <p class="item-text">
+            {service1.bullet3.text}
+          </p>
+        </li>
+      </ul>
+      <Button
+        data-aos="fade-up-sm"
+        href={localizePath('/contacto')}
+        variant="primary"
+        set:html={t('home.services.buttons.primary')}
+      />
+    </div>
+  </div>
+</section>
+
+<!-- SECOND SERVICE -->
+<section class="SBSservicesr overflow-x-hidden">
+  <div class="container">
+    <picture class="service-picture" data-aos="fade-left">
+      <source media="(max-width: 600px)" srcset={warehouseImage.src} />
+
+      <source media="(min-width: 601px)" srcset={warehouseImage.src} />
+      <img
+        class="card-image"
+        loading="lazy"
+        decoding="async"
+        src={warehouseImage.src}
+        alt="warehouse"
+        width="586"
+        height="690"
+      />
+    </picture>
+    <div class="content">
+      <Headline
+        position="start"
+        tagline={t('services.service1.tagline')}
+        title={t('services.service1.title')}
+        subtitle={t('services.service1.subtitle')}
+        classes={{
+          subtitle: 'text-xl',
+        }}
+      />
+      <ul class="card-group">
+        <li data-aos-easing="ease-in-sine" data-aos="fade-right-sm" class="item">
+          <div class="wrapper">
+            <span class="item-number">01</span>
+            <h3 class="h3">{service2.bullet1.title}</h3>
+          </div>
+          <p class="item-text">
+            {service2.bullet1.text}
+          </p>
+        </li>
+        <li data-aos-easing="ease-in-sine" data-aos="fade-right-sm" class="item">
+          <div class="wrapper">
+            <span class="item-number">02</span>
+            <h3 class="h3">{service3.bullet2.title}</h3>
+          </div>
+          <p class="item-text">
+            {service2.bullet2.text}
+          </p>
+        </li>
+        <li data-aos-easing="ease-in-sine" data-aos="fade-right-sm" class="item">
+          <div class="wrapper">
+            <span class="item-number">03</span>
+            <h3 class="h3">{service3.bullet3.title}</h3>
+          </div>
+          <p class="item-text">
+            {service2.bullet3.text}
+          </p>
+        </li>
+      </ul>
+      <Button
+        data-aos="fade-up-sm"
+        href={localizePath('/contacto')}
+        variant="primary"
+        set:html={t('home.services.buttons.primary')}
+      />
+    </div>
+  </div>
+</section>
+
+<!-- THIRD SERVICE -->
+<section class="SBSservices">
+  <div class="container">
+    <picture class="service-picture" data-aos="fade-right">
+      <source media="(max-width: 600px)" srcset={deliveryImage.src} />
+      <source media="(min-width: 601px)" srcset={deliveryImage.src} />
+      <img
+        class="card-image"
+        loading="lazy"
+        decoding="async"
+        src={deliveryImage.src}
+        alt="package delivery"
+        width="586"
+        height="690"
+      />
+    </picture>
+    <div class="content">
+      <Headline
+        position="start"
+        tagline={t('services.service2.tagline')}
+        title={t('services.service2.title')}
+        subtitle={t('services.service2.subtitle')}
+        classes={{
+          subtitle: 'text-xl',
+        }}
+      />
+      <ul class="card-group">
+        <li data-aos-delay="20" data-aos="fade-right-sm" class="item">
+          <div class="wrapper">
+            <span class="item-number">01</span>
+            <h3 class="h3">{service3.bullet1.title}</h3>
+          </div>
+          <p class="item-text">
+            {service3.bullet1.text}
+          </p>
+        </li>
+        <li data-aos-offset="190" data-aos="fade-right-sm" class="item">
+          <div class="wrapper">
+            <span class="item-number">02</span>
+            <h3 class="h3">{service3.bullet2.title}</h3>
+          </div>
+          <p class="item-text">
+            {service3.bullet2.text}
+          </p>
+        </li>
+        <li data-aos-offset="190" data-aos="fade-right-sm" class="item">
+          <div class="wrapper">
+            <span class="item-number">03</span>
+            <h3 class="h3">{service3.bullet3.title}</h3>
+          </div>
+          <p class="item-text">
+            {service3.bullet3.text}
+          </p>
+        </li>
+      </ul>
+      <Button
+        data-aos="fade-up-sm"
+        href={localizePath('/contacto')}
+        variant="primary"
+        set:html={t('home.services.buttons.primary')}
+      />
+    </div>
+  </div>
+</section>
 
 <style>
   img.card-image {
     overflow: hidden;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
   }
+
+  @media only screen and (min-width: 0rem) {
+    .SBSservices,
+    .SBSservicesr {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+    }
+    .SBSservices .container,
+    .SBSservicesr .container {
+      width: 100%;
+      max-width: 36.5rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(2.5rem, 6vw, 4rem);
+    }
+    .SBSservices .service-picture,
+    .SBSservicesr .service-picture {
+      width: 100%;
+      height: clamp(25rem, 80vw, 47rem);
+      display: block;
+      position: relative;
+    }
+    .SBSservices .service-picture img,
+    .SBSservicesr .service-picture img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .SBSservices .content,
+    .SBSservicesr .content {
+      text-align: left;
+      width: 100%;
+      max-width: 39.375rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .SBSservices .card-group,
+    .SBSservicesr .card-group {
+      width: 100%;
+      max-width: clamp(34.375rem, 50vw, 29.375rem);
+      padding: 0;
+      margin: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(1.75rem, 4vw, 2.5rem) 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: clamp(1rem, 4vw, 2.5rem);
+    }
+    .SBSservices .item,
+    .SBSservicesr .item {
+      list-style: none;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .SBSservices .wrapper,
+    .SBSservicesr .wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.625rem;
+    }
+    .SBSservices .item-number,
+    .SBSservicesr .item-number {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--oe-color-primary);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .SBSservices .h3,
+    .SBSservicesr .h3 {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--headerColor);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .SBSservices .item-text,
+    .SBSservicesr .item-text {
+      font-size: 1rem;
+      line-height: 1.5em;
+      font-weight: 600;
+      margin: 0;
+      color: var(--bodyTextColor);
+    }
+  }
+
+  @media only screen and (min-width: 48rem) {
+    .SBSservices .container,
+    .SBSservicesr .container {
+      max-width: 80rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    .SBSservices .content,
+    .SBSservicesr .content {
+      width: 50%;
+      max-width: 39.375rem;
+      flex: none;
+    }
+    .SBSservices .card-group,
+    .SBSservicesr .card-group {
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .SBSservices .item,
+    .SBSservicesr .item {
+      grid-column: span 6;
+    }
+    .SBSservices .service-picture,
+    .SBSservicesr .service-picture {
+      height: auto;
+      min-height: 32.8125rem;
+    }
+  }
+
+  @media only screen and (min-width: 64rem) {
+    .SBSservices .content,
+    .SBSservicesr .content {
+      padding: 5.25rem 0;
+      align-self: center;
+    }
+  }
+
+  @media only screen and (min-width: 0rem) {
+    .SBSservicesr {
+      background-color: #f7f7f7;
+    }
+  }
+
+  @media only screen and (min-width: 48rem) {
+    .SBSservicesr .service-picture {
+      order: 2;
+    }
+  }
 </style>
-
-<section class="overflow-hidden p-clamp">
-  <div class="m-auto flex w-full max-w-[34.375rem] flex-col items-center md:relative md:max-w-[80rem]">
-    <Headline tagline={tagline} title={title} subtitle={subtitle} classes={{ container: 'mb-12 max-w-4xl' }} />
-
-    <div class="mx-auto max-w-4xl px-0 md:px-8 lg:px-0">
-      {
-        services.map((service) => (
-          <div class="flex flex-row flex-wrap items-center justify-start py-8">
-            <div class="flex w-full items-end justify-start md:w-2/4 ">
-              <Image
-                data-aos="fade-up-sm"
-                src={service.image.src}
-                alt={service.image.alt}
-                width={400}
-                height={600}
-                class="card-image max-h-[32rem] rounded-md md:max-h-[400px] lg:max-h-[600px]"
-              />
-            </div>
-            <div class="w-full py-8 md:w-2/4 md:py-0">
-              <p
-                data-aos="fade-up-sm"
-                data-aos-delay="300"
-                class="tagline-fs mb-1 font-bold uppercase tracking-wide text-secondary"
-              >
-                {tagline}
-              </p>
-              <div class="my-4 border-l-4 border-primary pl-4">
-                <h1 data-aos="fade-up-sm" data-aos-delay="300" class="mb-3 text-4xl">
-                  {service.title}
-                </h1>
-              </div>
-              <h1 data-aos="fade-up-sm" data-aos-delay="300" class="text-2xl">
-                {service.subtitle}
-              </h1>
-              <div class="flex flex-row gap-4 py-4">
-                <Button href={localizePath('/contacto')} variant="primary" class="border">
-                  {' '}
-                  {actions[0]}
-                </Button>
-                <Button href={localizePath('/servicios')} class="border">
-                  {actions[1]}
-                </Button>
-              </div>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-  </div>
-</section>

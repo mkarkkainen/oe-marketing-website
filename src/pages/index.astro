@@ -1,20 +1,18 @@
 ---
 import { t, changeLanguage } from "i18next";
 import Layout from "~/layouts/PageLayout.astro";
-import Waves from "~/components/ui/Waves.astro";
 import Features from "~/components/widgets/Features.astro";
 import Stats from "~/components/widgets/Stats.astro";
 import SideBySide from "~/components/widgets/SideBySide.astro";
-import Services from "~/components/widgets/ServicesMin.astro";
-import HeroComponent from "~/components/widgets/HeroComponent.astro";
+import ServicesMin from "~/components/widgets/ServicesMin.astro";
+import Hero from "~/components/widgets/Hero.astro";
 import LogoCarousel from "~/components/widgets/LogoCarousel.astro";
-
-// Images
+import Waves from "~/components/ui/Waves.astro";
+import warehouseImage from "~/assets/images/warehouse.avif";
+import aiplaneImage from "~/assets/images/airplane.avif";
+import deliveryImage from "~/assets/images/delivery.avif";
 import heroImage from "~/assets/images/oe-14.avif";
 import founderImg from "~/assets/images/oe-6.avif";
-import warehouseImage from "~/assets/images/warehouse.avif";
-import airplaneImage from "~/assets/images/airplane.avif";
-import deliveryImage from "~/assets/images/delivery.avif";
 
 changeLanguage("es");
 
@@ -34,7 +32,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <HeroComponent section="home" image={{ src: heroImage.src, alt: 'team members discussing' }} />
+  <Hero section="home" image={{ src: heroImage.src, alt: 'team members discussing' }} />
 
   <LogoCarousel />
 
@@ -46,7 +44,7 @@ const metadata = {
     image={{ src: founderImg.src, alt: 'image of founder' }}
   />
 
-  <Services
+  <ServicesMin
     tagline={t('home.services.tagline')}
     title={t('home.services.title')}
     subtitle={t('home.services.subtitle')}
@@ -56,7 +54,7 @@ const metadata = {
         title: t('home.services.card0.title'),
         subtitle: t('home.services.card0.subtitle'),
         image: {
-          src: airplaneImage.src,
+          src: aiplaneImage.src,
           alt: 'airport',
         },
       },

@@ -1,83 +1,154 @@
 ---
-import Image from '~/components/common/Image.astro';
-import Button from '~/components/ui/Button.astro';
-import type { CallToAction } from '~/types';
 import { t } from 'i18next';
+import { fade } from 'astro:transitions';
+import { localizePath } from 'astro-i18next';
+
+import Image from '~/components/common/Image.astro';
+import Button from '../ui/Button.astro';
 
 export interface Props {
-  id?: string;
-  title?: string;
-  subtitle?: string;
-  tagline?: string;
-  content?: string;
-  actions?: string | CallToAction[];
   image?: string | any;
+  section: string;
 }
 
-const {
-  id,
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  tagline = await Astro.slots.render('tagline'),
-  content = await Astro.slots.render('content'),
-  actions = await Astro.slots.render('actions'),
-  image = await Astro.slots.render('image'),
-} = Astro.props;
+const { section, image = await Astro.slots.render('image') } = Astro.props;
 ---
 
-<section class="not-prose relative md:-mt-[76px]" {...id ? { id } : {}}>
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
-    <div class="flex py-36 md:pt-56">
-      <div class="z-10 max-w-2xl pb-10 text-start md:pb-16">
-        {
-          tagline && (
-            <span
-              class="font-bold uppercase tracking-wide text-secondary [font-size:_clamp(0.8125rem,1.6vw,1rem)]"
-              set:html={t(tagline)}
-            />
-          )
-        }
-        {
-          title && (
-            <h1
-              class="tracking-loose mb-4 font-heading font-bold leading-[120%] text-dark font-size:_clamp(2.4375rem,5vw,3.8125rem)]"
-              set:html={t(title)}
-            />
-          )
-        }
-        <div class="max-w-3xl">
-          {subtitle && <p class="mb-6 text-xl text-muted" set:html={subtitle} />}
+<style>
+  .tagline-fs {
+    font-size: clamp(0.8125rem, 1.6vw, 1.25rem);
+  }
+  .title-fs {
+    font-size: clamp(2.4375rem, 4.9vw, 5.0625rem);
+    line-height: 1.2em;
+  }
+  .subtitle-fs {
+    font-size: clamp(1rem, 1.6vw, 2rem);
+  }
+</style>
 
-          {
-            actions && (
-              <div class="flex flex-col flex-nowrap gap-4 sm:flex-row sm:justify-start">
-                {Array.isArray(actions) ? (
-                  actions.map((action) => (
-                    <div class="flex w-full sm:w-auto">
-                      <Button text={t('cta.primary')} {...(action || {})} class="w-full sm:mb-0" />
-                    </div>
-                  ))
-                ) : (
-                  <Fragment set:html={actions} />
-                )}
-              </div>
-            )
-          }
-        </div>
-
-        {content && <Fragment set:html={content} />}
-        {
-          image && (
-            <div class="absolute left-0 top-0 -z-10 mt-16 w-full bg-hero bg-cover">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image class="mx-auto w-full rounded-md" widths={[400, 768, 1024, 2040]} loading="eager" {...image} />
-              )}
-            </div>
-          )
-        }
-      </div>
+<section
+  data-aos="scale-down-hero"
+  data-aos-anchor="#trigger"
+  data-aos-anchor-placement="top-top"
+  data-aos-duration="600"
+  transition:animate={fade({ duration: '1s' })}
+  id="hero"
+  class="z-50 mx-auto md:max-w-[120rem]"
+>
+  <div class="content-container">
+    <div class="content">
+      <p
+        id="trigger"
+        class="tagline-fs font-bold uppercase text-[#ffd199]"
+        set:html={t(`${section}.hero.tagline`)}
+      />
+      <h1
+        data-aos="fade-up-sm"
+        data-aos-delay="200"
+        class="title-fs mb-4 font-heading font-bold text-white"
+        set:html={t(`${section}.hero.title`)}
+      />
+      <p
+        data-aos="fade-up-sm"
+        data-aos-delay="300"
+        class="subtitle-fs mb-8 text-white"
+        set:html={t(`${section}.hero.subtitle`)}
+      />
+      {
+        section === 'home' && (
+          <div data-aos="fade-up-sm" data-aos-delay="300" class="flex items-center justify-center gap-4 sm:flex-row">
+            <Button
+              href={localizePath('/contacto')}
+              class="flex-grow"
+              variant="primary"
+              set:html={t('home.hero.action.primary')}
+            />
+            <Button
+              href={localizePath('/servicios')}
+              class="flex-grow"
+              variant="secondary"
+              set:html={t('home.hero.action.secondary')}
+            />
+          </div>
+        )
+      }
     </div>
   </div>
+  <picture class="background">
+    <source media="(max-width: 600px)" srcset={image.src} />
+    <source media="(min-width: 601px)" srcset={image.src} />
+    <img
+      loading="lazy"
+      decoding="async"
+      src={image.src}
+      alt={image.alt}
+      width="1920"
+      height="1200"
+      aria-hidden="true"
+    />
+  </picture>
 </section>
+
+<style>
+  @media only screen and (min-width: 120rem) {
+    #hero {
+      padding-bottom: 14vw;
+    }
+  }
+  @media only screen and (min-width: 0rem) {
+    #hero {
+      background: #000;
+      min-height: 100vh;
+      padding: clamp(12.5rem, 25.95vw, 18.75em) 1rem;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    #hero .content-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+    #hero .content {
+      text-align: center;
+      width: 100%;
+      max-width: 46.875rem;
+    }
+    #hero .background {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+    }
+    #hero .background:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: #000;
+      position: absolute;
+      display: block;
+      opacity: 0.6;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+    #hero .background img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+</style>

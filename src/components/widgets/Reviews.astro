@@ -4,13 +4,11 @@ const { reviews } = Astro.props;
 ---
 
 <section class="py-clamp">
-  <!-- <h2 class="sr-only">Reviews</h2> -->
   <div class="reviews-container mx-auto w-full max-w-3xl md:max-w-[80rem]">
     <button class="review-btn grid-sm review-btn--prev" id="prev" aria-label="Previous Review">
       <Icon name="tabler:chevron-left" width={50} height={50} />
     </button>
     <div class="reviews">
-      <!-- title, testimonial, name, job -->
       {
         reviews.slice(reviews.length - 1).map((review) => (
           <div class="review grid-sm">
@@ -89,7 +87,16 @@ const { reviews } = Astro.props;
     max-width: 900px;
     margin: auto;
   }
-  
+  .reviews-wrapper {
+    background-color: #346385;
+    margin: 0 calc(var(--size-fluid-2) * -1);
+  }
+
+  .reviews-wrapper::after,
+  .reviews-wrapper::before {
+    inset-inline: 20%;
+  }
+
   .review-name {
     color: white;
   }
@@ -98,8 +105,7 @@ const { reviews } = Astro.props;
     overflow: hidden;
     position: relative;
     width: calc(100vw - var(--size-fluid-2));
-    background-color: var(--oe-color-primary-dark);
-    border-radius: 8px;
+    background-color: #346385;
   }
 
   .reviews {

@@ -5,50 +5,52 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <section id="contact-component">
-  <div class="oe-container relative m-auto flex w-full max-w-2xl flex-col items-stretch justify-center">
-    <div class="oe-contact-group">
+  <div class="container relative m-auto flex w-full max-w-2xl flex-col items-stretch justify-center">
+    <div class="contact-group">
       <Headline
         position="start"
         title={t('contact.title')}
         subtitle={t('contact.subtitle')}
-        classes={{ title: 'text-dark', subtitle: 'mb-8 text-xl' }}
+        classes={{ title: 'text-[#1D4664]', subtitle: 'mb-8 text-xl' }}
       />
       <ul class="relative m-0 box-border flex w-full flex-col items-start gap-6 p-0">
-        <li data-aos="fade-up-sm" class="flex items-start justify-start gap-5">
+        <li data-aos="fade-down-sm" class="flex items-start justify-start gap-5">
           <picture
             class="m-0 flex h-[3.75rem] w-[3.75rem] flex-none items-center justify-center rounded-full border border-gray-400 transition-transform duration-300"
           >
-            <Icon name="tabler:phone" class="oe-icon" height={40} width={40} />
+            <Icon name="tabler:phone" class="icon" height={40} width={40} />
           </picture>
           <div>
-            <span class="mb-[0.75rem] block text-[2rem] font-bold text-dark" set:html={t('contact.phone')} />
-            <a href="tel:888-4565-789" class="relative block text-xl text-dark hover:underline"
+            <span class="mb-[0.75rem] block text-[2rem] font-bold text-[#1D4664]" set:html={t('contact.phone')} />
+            <a href="tel:888-4565-789" class="relative block text-xl text-[#767676] hover:underline"
               >+506 2265-3272 / +506 8365-3272
             </a>
           </div>
         </li>
-        <li data-aos="fade-up-sm" class="oe-li flex items-start justify-start gap-5">
+        <li data-aos="fade-down-sm" class="li flex items-start justify-start gap-5">
           <picture
             class="m-0 flex h-[3.75rem] w-[3.75rem] flex-none items-center justify-center rounded-full border border-gray-400 transition-transform duration-300"
           >
-            <Icon name="tabler:mail" class="oe-icon" height={40} width={40} />
+            <Icon name="tabler:mail" class="icon" height={40} width={40} />
           </picture>
           <div>
-            <span class="mb-[0.75rem] block text-[2rem] font-bold text-dark" set:html={t('contact.email')} />
-            <a href="mailto:info@oceanexpresscr.com" class="relative block text-xl text-dark hover:underline"
+            <span class="mb-[0.75rem] block text-[2rem] font-bold text-[#1D4664]" set:html={t('contact.email')} />
+            <a href="mailto:info@oceanexpresscr.com" class="relative block text-xl text-[#767676] hover:underline"
               >info@oceanexpresscr.com</a
             >
           </div>
         </li>
-        <li data-aos="fade-up-sm" class="oe-li flex items-start justify-start gap-5">
+        <li data-aos="fade-down-sm" class="li flex items-start justify-start gap-5">
           <picture
             class="m-0 flex h-[3.75rem] w-[3.75rem] flex-none items-center justify-center rounded-full border border-gray-400 transition-transform duration-300"
           >
-            <Icon name="tabler:map-pin" class="oe-icon" height={40} width={40} />
+            <Icon name="tabler:map-pin" class="icon" height={40} width={40} />
           </picture>
-          <div class="">
-            <span class="mb-[0.75rem] block text-[2rem] font-bold text-dark" set:html={t('contact.location')} />
-            <a href="" class="relative block text-xl text-dark hover:underline">Heredia, Costa Rica. 40403</a>
+          <div>
+            <span class="mb-[0.75rem] block text-[2rem] font-bold text-[#1D4664]" set:html={t('contact.location')} />
+            <a href="#map-location" class="relative block text-xl text-[#767676] hover:underline"
+              >Heredia, Costa Rica. 40403</a
+            >
           </div>
         </li>
       </ul>
@@ -56,24 +58,25 @@ import { Icon } from 'astro-icon/components';
     <!--Form-->
 
     <form
-      class="oe-form"
-      id="oe-form-1150"
+      data-aos="fade-left-sm"
+      class="form"
+      id="form-1150"
       name="contact"
       netlify-honeypot="bot-field"
       method="post"
       data-netlify="true"
       onsubmit="submit"
     >
-      <h3 class="text-2xl-c font-semibold text-dark" set:html={t('contact.form.title')} />
-      <p class="text-lg text-dark" set:html={t('contact.form.subtitle')} />
+      <h3 class="text-2xl-c font-semibold text-[#1D4664]" set:html={t('contact.form.title')} />
+      <p class="text-lg text-[#1D4664]" set:html={t('contact.form.subtitle')} />
       <p class="hidden">
         <label>
           Don’t fill this out if you’re human: <input name="bot-field" />
         </label>
       </p>
-      <label class="oe-label font-semibold" set:html={t('contact.name')} />
+      <label class="label font-semibold" set:html={t('contact.name')} />
       <input
-        class="oe-input"
+        class="input"
         required
         type="text"
         id="name-1150"
@@ -81,9 +84,9 @@ import { Icon } from 'astro-icon/components';
         placeholder={t('contact.placeholder.name')}
       />
 
-      <label class="oe-label oe-email font-semibold" set:html={t('contact.email')} />
+      <label class="label email font-semibold" set:html={t('contact.email')} />
       <input
-        class="oe-input"
+        class="input"
         required
         type="email"
         id="email-1150"
@@ -91,10 +94,10 @@ import { Icon } from 'astro-icon/components';
         placeholder={t('contact.placeholder.email')}
       />
 
-      <label class="oe-label oe-phone font-semibold" set:html={t('contact.phone')} />
+      <label class="label phone font-semibold" set:html={t('contact.phone')} />
 
       <input
-        class="oe-input"
+        class="input"
         required
         type="tel"
         id="phone-1150"
@@ -102,22 +105,23 @@ import { Icon } from 'astro-icon/components';
         placeholder={t('contact.placeholder.phone')}
       />
 
-      <label class="oe-label font-semibold" set:html={t('contact.message')} />
+      <label class="label font-semibold" set:html={t('contact.message')} />
 
       <textarea
-        class="oe-input oe-textarea"
+        class="input textarea"
         required
         name="Message"
         id="message-1150"
         placeholder={t('contact.placeholder.message')}></textarea>
 
-      <button class="oe-button-solid oe-submit" type="submit">
+      <button class="button-solid submit" type="submit">
         {t('contact.action')}
       </button>
     </form>
   </div>
   <div class="mx-auto my-12 flex w-full max-w-[80rem] items-center justify-center">
     <iframe
+      id="map-location"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47476.904372765246!2d-84.19052701237278!3d10.018668110038147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fb4085a0336f%3A0xdc3893184d557f9d!2sOcean%20Express%20Internacional!5e0!3m2!1sen!2scr!4v1703271466509!5m2!1sen!2scr"
       width="600"
       height="450"
@@ -133,19 +137,7 @@ import { Icon } from 'astro-icon/components';
     width: 100%;
     height: 32rem;
   }
-  .oe-topper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
-    display: block;
-  }
-
-  .oe-title {
+  .title {
     font-size: var(--headerFontSize);
     font-weight: 900;
     line-height: 1.2em;
@@ -156,7 +148,7 @@ import { Icon } from 'astro-icon/components';
     position: relative;
   }
 
-  .oe-text {
+  .text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-align: inherit;
@@ -166,17 +158,14 @@ import { Icon } from 'astro-icon/components';
     color: var(--bodyTextColor);
   }
 
-  /* Mobile - 360px */
   @media only screen and (min-width: 0rem) {
     #contact-component {
       padding: var(--sectionPadding);
-      background-color: #f7f7f7;
       position: relative;
       z-index: 1;
     }
-    #contact-component .oe-container {
+    #contact-component .container {
       width: 100%;
-      /* changes to 1280px at desktop */
       max-width: 44rem;
       margin: auto;
       display: flex;
@@ -184,113 +173,29 @@ import { Icon } from 'astro-icon/components';
       align-items: stretch;
       flex-direction: column;
       column-gap: auto;
-      /* 48px - 80px */
       row-gap: clamp(3rem, 6vw, 5rem);
       position: relative;
     }
-    #contact-component .oe-content {
-      /* set text align to left if content needs to be left aligned */
-      text-align: center;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      /* centers content horizontally, set to flex-start to left align */
-      align-items: center;
-    }
 
-    #contact-component .oe-topper {
-      color: #767676;
-    }
-    #contact-component .oe-title {
+    #contact-component .title {
       max-width: 23ch;
       margin: 0;
     }
-    #contact-component .oe-picture {
-      width: 100%;
-      /* 240px - 300px */
-      height: clamp(15rem, 35vw, 18.75rem);
-      margin: 0 0 1.5rem;
-      border-radius: 1.5rem;
-      /* clips image corners */
-      overflow: hidden;
-      display: block;
-      position: relative;
-    }
-    #contact-component .oe-picture img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    #contact-component .oe-contact-text {
-      font-size: 1rem;
-      line-height: 1.5em;
-      text-align: left;
-      margin: 0 0 1.5rem;
-      color: var(--bodyTextColor);
-    }
-    #contact-component .oe-ul {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.5rem;
-      position: relative;
-    }
-    #contact-component .oe-li {
+
+    #contact-component .li {
       list-style: none;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       gap: 1.25rem;
     }
-    #contact-component .oe-li:hover .oe-icon-wrapper {
-      transform: scale(1.1);
-    }
-    #contact-component .oe-header {
-      font-size: 1.25rem;
-      font-weight: 700;
-      line-height: 1.2em;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-    #contact-component .oe-link {
-      font-size: 1rem;
-      line-height: 1.5em;
-      text-decoration: none;
-      color: #767676;
-      display: block;
-      position: relative;
-    }
-    #contact-component .oe-link:hover {
-      text-decoration: underline;
-    }
-    #contact-component .oe-icon-wrapper {
-      width: 3.75rem;
-      height: 3.75rem;
-      margin: 0;
-      border-radius: 50%;
-      border: 1px solid #bababa;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: none;
-      transition: transform 0.3s;
-    }
-    #contact-component .oe-icon {
+    #contact-component .icon {
       width: 1.5rem;
       height: auto;
       display: block;
     }
-    #contact-component .oe-form {
+    #contact-component .form {
       width: 100%;
-      /* 24px - 48px top and bottom */
-      /* 16px - 32px left and right */
       padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 2rem);
       box-sizing: border-box;
       background-color: #fff;
@@ -301,18 +206,17 @@ import { Icon } from 'astro-icon/components';
       align-items: center;
       gap: 0.75rem;
     }
-    #contact-component .oe-label {
-      /* 14px - 16px */
+    #contact-component .label {
       font-size: clamp(0.875rem, 1.5vw, 1rem);
       width: 100%;
-      color: var(--oe-color-primary-dark);
+      color: var(--headerColor);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       gap: 0.25rem;
     }
-    #contact-component .oe-input {
+    #contact-component .input {
       font-size: 1rem;
       width: 100%;
       height: 3.5rem;
@@ -324,29 +228,28 @@ import { Icon } from 'astro-icon/components';
       border: none;
       box-sizing: border-box;
     }
-    #contact-component .oe-input::placeholder {
+    #contact-component .input::placeholder {
       color: #7d799c;
       opacity: 0.6;
     }
-    #contact-component .oe-textarea {
+    #contact-component .textarea {
       min-height: 7.5rem;
       padding-top: 1.5rem;
       margin-bottom: 0.75rem;
       font-family: inherit;
     }
-    #contact-component .oe-button-solid {
+    #contact-component .button-solid {
       font-size: 1rem;
-      /* 46px - 56px */
       line-height: clamp(2.875em, 5.5vw, 3.5em);
       text-decoration: none;
       font-weight: 700;
       text-align: center;
       margin: 0;
-      color: var(--oe-color-primary-dark);
-      border: 2px solid var(--oe-color-primary-dark);
+      color: whitesmoke;
+      border: none;
       min-width: 9.375rem;
       padding: 0 1.5rem;
-      background-color: var(--secondary);
+      background-color: var(--oe-color-primary);
       border-radius: 0.25rem;
       overflow: hidden;
       display: inline-block;
@@ -355,12 +258,12 @@ import { Icon } from 'astro-icon/components';
       box-sizing: border-box;
       transition: color 0.3s;
     }
-    #contact-component .oe-button-solid:before {
+    #contact-component .button-solid:before {
       content: '';
       position: absolute;
       height: 100%;
       width: 0%;
-      background: var(--oe-color-primary-dark);
+      background: #000;
       opacity: 1;
       top: 0;
       left: 0;
@@ -368,62 +271,39 @@ import { Icon } from 'astro-icon/components';
       border-radius: 0.25rem;
       transition: width 0.3s;
     }
-    #contact-component .oe-button-solid:hover {
+    #contact-component .button-solid:hover {
       color: #fff;
     }
-    #contact-component .oe-button-solid:hover:before {
+    #contact-component .button-solid:hover:before {
       width: 100%;
     }
-    #contact-component .oe-submit {
+    #contact-component .submit {
       width: 100%;
       min-width: 17.6875rem;
       border-radius: 0.5rem;
     }
-    #contact-component .oe-submit:hover {
+    #contact-component .submit:hover {
       cursor: pointer;
-    }
-    #contact-component .oe-graphic {
-      display: none;
-    }
-    #contact-component .oe-graphic1 {
-      width: 13rem;
-      height: auto;
-      position: absolute;
-      left: -7.5rem;
-      top: 8.625rem;
-    }
-    #contact-component .oe-graphic2 {
-      width: 12.8125rem;
-      height: auto;
-      position: absolute;
-      right: -9.75rem;
-      top: 0.5rem;
     }
   }
   /* Desktop - 1024px */
   @media only screen and (min-width: 64rem) {
-    #contact-component .oe-container {
+    #contact-component .container {
       max-width: 80rem;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    #contact-component .oe-contact-group {
+    #contact-component .contact-group {
       width: 50%;
       max-width: 39.375rem;
     }
-    #contact-component .oe-form {
+    #contact-component .form {
       width: 46%;
       max-width: 36.125rem;
     }
-    #contact-component .oe-submit {
+    #contact-component .submit {
       width: 100%;
-    }
-  }
-  /* Large Desktop - 1500px */
-  @media only screen and (min-width: 93.75rem) {
-    #contact-component .oe-graphic {
-      display: block;
     }
   }
 </style>

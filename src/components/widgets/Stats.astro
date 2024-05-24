@@ -1,12 +1,17 @@
 ---
 import type { Stats } from '~/types';
+import WidgetWrapper from '../ui/WidgetWrapper.astro';
 import Headline from '../ui/Headline.astro';
+import { t } from 'i18next';
 
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
   stats = [],
+  id,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
 } = Astro.props as Stats;
 ---
 
@@ -37,19 +42,19 @@ const {
   <div class="mx-auto flex flex-row flex-wrap items-center justify-center pt-4 md:pt-16">
     {
       stats &&
-        stats.map(({ amount, title }) => (
-          <section class="w-full min-w-[220px] p-4 text-center sm:w-1/2 md:w-1/4 md:last:border-none ">
+        stats.map(({ amount, title }, i) => (
+          <div class="w-full min-w-[220px] p-4 text-center sm:w-1/2 md:w-1/4 md:last:border-none ">
             {amount && (
-              <figure class="mb-2 font-heading text-[2.125rem] font-bold text-dark lg:text-5xl xl:text-6xl">
+              <div class="mb-2 font-heading text-[2.125rem] font-bold text-[#00081B] lg:text-5xl xl:text-6xl">
                 <p data-aos="fade-up-sm">{amount}</p>
-              </figure>
+              </div>
             )}
             {title && (
-              <figure class="whitespace-nowrap text-[1rem] font-bold tracking-widest text-dark  md:text-lg ">
+              <div class="whitespace-nowrap text-[1rem] font-bold tracking-widest text-[#5E5F63] md:text-lg ">
                 <p data-aos="fade-up-sm">{title}</p>
-              </figure>
+              </div>
             )}
-          </section>
+          </div>
         ))
     }
   </div>

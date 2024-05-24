@@ -25,7 +25,11 @@ const {
 ---
 
 <WidgetWrapper id={id} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
-  <div data-aos="flip-up" class="mx-auto max-w-3xl rounded-md bg-white p-6 text-center shadow-xl">
+  <div
+    data-aos="fade-down-sm"
+    data-aos-easing="ease-in-sine"
+    class="mx-auto max-w-3xl rounded-md bg-white p-6 text-center shadow-xl"
+  >
     <Headline
       title={title}
       subtitle={subtitle}
@@ -33,8 +37,8 @@ const {
       classes={{
         container: 'mb-0 md:mb-0',
         title:
-          'text-left md:text-center text-xl md:text-4xl text-dark font-bold leading-tighter tracking-tighter mb-4 font-heading',
-        subtitle: 'text-base md:text-center text-left md:text-xl text-dark',
+          'text-left md:text-center text-xl md:text-4xl text-[#346385] font-bold leading-tighter tracking-tighter mb-4 font-heading',
+        subtitle: 'text-base md:text-center text-left md:text-xl text-[#23435A]',
       }}
     />
     {
@@ -43,7 +47,7 @@ const {
           {Array.isArray(actions) ? (
             actions.map((action) => (
               <div class="flex w-full sm:w-auto">
-                <Button data-aos="fade-up-sm" {...(action || {})} class="w-full sm:mb-0" />
+                <Button  {...(action || {})} class="w-full bg-[#346385] sm:mb-0" />
               </div>
             ))
           ) : (

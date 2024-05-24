@@ -58,14 +58,14 @@ const {
               )}
 
               {job && (
-                <div class="h-[2rem] flex-grow text-center font-heading text-sm font-bold uppercase tracking-[0.08125rem] text-dark md:h-[3rem]">
+                <div class="h-[2rem] flex-grow text-center font-heading text-sm font-bold uppercase tracking-[0.08125rem] text-[#1A1A1A] md:h-[3rem]">
                   {job}
                 </div>
               )}
-              {title && <div class="mb-4 text-center text-[1.2rem] font-medium text-dark">{name}</div>}
+              {title && <div class="mb-4 text-center text-[1.2rem] font-medium text-[#1A1A1A]">{name}</div>}
               <span class="">
                 <Button
-                  class="font-semibold text-dark  underline transition duration-300 ease-in-out group-hover:text-blue-700"
+                  class="font-semibold underline transition duration-300 ease-in-out group-hover:text-blue-700"
                   variant="link"
                   set:html={actions.open}
                 />

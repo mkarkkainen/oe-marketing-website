@@ -1,8 +1,8 @@
 ---
 import { t, changeLanguage } from "i18next";
-import Contact from "~/components/widgets/Contact.astro";
-import HeroComponent from "~/components/widgets/HeroComponent.astro";
 import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Contact from "~/components/widgets/Contact.astro";
 import heroImage from "~/assets/images/oe-22.avif";
 
 changeLanguage("es");
@@ -21,6 +21,6 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <HeroComponent section="contact" image={{ src: heroImage.src, alt: 'team picture' }} />
+  <Hero section="contact" image={{ src: heroImage.src, alt: 'team picture' }} />
   <Contact />
 </Layout>

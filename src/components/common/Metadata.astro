@@ -1,5 +1,8 @@
 ---
 import merge from 'lodash.merge';
+// import { AstroSeo } from '@astrolib/seo';
+
+// import type { Props as AstroSeoProps } from '@astrolib/seo';
 
 import { SITE, METADATA, I18N } from '~/utils/config';
 import type { MetaData } from '~/types';
@@ -21,7 +24,9 @@ const {
   twitter = {},
 } = Astro.props;
 
-const seoProps = merge(
+// console.log(Astro.props);
+
+const seoProps: AstroSeoProps = merge(
   {
     title: '',
     titleTemplate: '%s',

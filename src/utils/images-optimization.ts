@@ -272,6 +272,7 @@ export async function getImagesOptimized(
   sizes ||= getSizes(Number(width) || undefined, layout);
   aspectRatio = parseAspectRatio(aspectRatio);
 
+  // Calculate dimensions from aspect ratio
   if (aspectRatio) {
     if (width) {
       if (height) {

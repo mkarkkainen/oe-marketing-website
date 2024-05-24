@@ -1,41 +1,39 @@
 ---
-import { t, changeLanguage } from 'i18next';
-import { localizePath } from 'astro-i18next';
+import { t, changeLanguage } from "i18next";
+import { localizePath } from "astro-i18next";
+import Trajectory from "~/components/widgets/Trajectory.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Team from "~/components/widgets/Team.astro";
+import Values from "~/components/widgets/Values.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import MissionVision from "~/components/widgets/MissionVision.astro";
+import ReverseContent from "~/components/widgets/ReverseContent.astro";
+import daniloImage from "~/assets/images/team/team-danilo.avif";
+import andresImage from "~/assets/images/team/team-andres.avif";
+import teresitaImage from "~/assets/images/team/team-teresita.avif";
+import carlosImage from "~/assets/images/team/team-carlos.avif";
+import heroImage from "~/assets/images/oe-20.avif";
+import storyImage from "~/assets/images/oe-212.avif";
 
-import Layout from '~/layouts/PageLayout.astro';
-import HeroComponent from '~/components/widgets/HeroComponent.astro';
-import Trajectory from '~/components/widgets/Trajectory.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Team from '~/components/widgets/Team.astro';
-import Values from '~/components/widgets/Values.astro';
-import MissionVision from '~/components/widgets/MissionVision.astro';
-import ReverseContent from '~/components/widgets/ReverseContent.astro';
-
-import heroImage from '~/assets/images/oe-20.avif';
-import storyImage from '~/assets/images/oe-212.avif';
-import daniloImage from '~/assets/images/team/team-danilo.avif';
-import andresImage from '~/assets/images/team/team-andres.avif';
-import yorlenyImage from '~/assets/images/team/team-yorleny.avif';
-import carlosImage from '~/assets/images/team/team-carlos.avif';
-
-changeLanguage('es');
+changeLanguage("es");
 
 const metadata = {
-  title: `${t('nav.link1')} - OceanExpress CR`,
-  description: t('about.meta.description'),
-  openGraph: {
-    basic: {
-      title: `${t('nav.link1')} - OceanExpress CR`,
-      type: 'article',
-      image: '/src/assets/images/defaultog.png',
-      description: t('about.meta.description'),
+    title: `${t("nav.link1")} - OceanExpress CR`,
+    description: t("about.meta.description"),
+    openGraph: {
+        basic: {
+            title: `${t("nav.link1")} - OceanExpress CR`,
+            type: "article",
+            image: "/src/assets/images/defaultog.png",
+            description: t("about.meta.description"),
+        },
     },
-  },
 };
 ---
 
 <Layout metadata={metadata}>
-  <HeroComponent section="about" image={{ src: heroImage.src, alt: 'team picture' }} />
+  <Hero section="about" image={{ src: heroImage.src, alt: 'team picture' }} />
 
   <ReverseContent />
 
@@ -55,17 +53,18 @@ const metadata = {
         image: { src: daniloImage.src, alt: 'headshot' },
       },
       {
+        name: t('about.team.member3.name'),
+        job: t('about.team.member3.position'),
+        description: t('about.team.member3.bio'),
+        image: { src: teresitaImage.src, alt: 'headshot' },
+      },
+      {
         name: t('about.team.member2.name'),
         job: t('about.team.member2.position'),
         description: t('about.team.member2.bio'),
         image: { src: andresImage.src, alt: 'headshot' },
       },
-      {
-        name: t('about.team.member3.name'),
-        job: t('about.team.member3.position'),
-        description: t('about.team.member3.bio'),
-        image: { src: yorlenyImage.src, alt: 'headshot' },
-      },
+
       {
         name: t('about.team.member4.name'),
         job: t('about.team.member4.position'),
@@ -88,7 +87,7 @@ const metadata = {
     <Fragment slot="title">{t('about.trajectory.title')}</Fragment>
 
     <Fragment slot="content">
-      <p class="text-lg text-dark  mb-2 text-left" set:html={t('about.trajectory.text')} />
+      <p data-aos="fade-up-sm" class="text-md mb-2 text-left" set:html={t('about.trajectory.text')} />
     </Fragment>
   </Trajectory>
 

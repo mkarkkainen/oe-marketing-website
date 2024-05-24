@@ -10,6 +10,28 @@ export interface MetaData {
   twitter?: MetaDataTwitter;
 }
 
+export interface HeadHrefLangs {}
+
+export interface MetaDataRobots {
+  index?: boolean;
+  follow?: boolean;
+}
+
+export interface MetaDataImage {
+  url: string;
+  width?: number;
+  height?: number;
+}
+
+export interface MetaDataOpenGraph {
+  basic: OpenGraphBasic;
+  url?: string;
+  siteName?: string;
+  images?: Array<MetaDataImage>;
+  locale?: string;
+  type?: string;
+}
+
 export interface OpenGraphBasic {
   title: string;
   image: string;
@@ -196,7 +218,7 @@ export interface Features extends Headline, Widget {
 export interface Faqs extends Headline, Widget {
   iconUp?: string;
   iconDown?: string;
-  items: Array<Item>;
+  items?: Array<Item>;
   columns?: number;
   action?: string;
 }

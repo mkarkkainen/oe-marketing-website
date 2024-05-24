@@ -12,9 +12,9 @@ const {
 
 const {
   container: containerClass = 'max-w-3xl',
-  tagline: taglineClass = 'font-bold uppercase tracking-wide text-dark tagline-fs',
-  title: titleClass = 'text-dark font-bold tracking-loose',
-  subtitle: subtitleClass = 'text-xl text-dark',
+  tagline: taglineClass = 'font-bold downpercase tracking-wide text-secondary tagline-fs',
+  title: titleClass = 'font-heading font-bold tracking-loose',
+  subtitle: subtitleClass = 'text-xl',
 } = classes;
 ---
 
@@ -34,22 +34,22 @@ const {
       )}
     >
       {tagline && (
-        <p data-aos="fade-up-sm" data-aos-delay="200" class={(twMerge(''), taglineClass)} set:html={tagline} />
+        <p data-aos="fade-down-sm"  class={(twMerge(''), taglineClass)} set:html={tagline} />
       )}
       {title && (
         <h2
-          data-aos="fade-up-sm"
-          data-aos-delay="300"
-          class={twMerge('leading-tight text-2xl-c font-bold ', titleClass)}
+          data-aos="fade-down-sm"
+   
+          class={twMerge('leading-tighter text-heading text-2xl-c font-bold ', titleClass)}
           set:html={title}
         />
       )}
 
       {subtitle && (
         <p
-          data-aos="fade-up-sm"
-          data-aos-delay="400"
-          class={twMerge('mt-2 text-dark', subtitleClass)}
+          data-aos="fade-down-sm"
+          data-aos-delay="50"
+          class={twMerge('mt-2 text-muted', subtitleClass)}
           set:html={subtitle}
         />
       )}

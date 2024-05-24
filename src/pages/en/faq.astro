@@ -2,10 +2,11 @@
 import { t, changeLanguage } from "i18next";
 import Layout from "~/layouts/PageLayout.astro";
 import FAQs from "~/components/widgets/FAQs.astro";
-import HeroComponent from "~/components/widgets/HeroComponent.astro";
+import Hero from "~/components/widgets/Hero.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import heroImage from "~/assets/images/oe351.avif";
 import { localizePath } from "astro-i18next";
+import Headline from "~/components/ui/Headline.astro";
 
 changeLanguage("en");
 
@@ -24,9 +25,13 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <HeroComponent section="faq" image={{ src: heroImage.src, alt: 'team members discussing' }} />
+  <Hero section="faq" image={{ src: heroImage.src, alt: 'team members discussing' }} />
+  <div class="py-8">
+    <Headline subtitle={t('faq.subtitle')} />
+  </div>
   <FAQs
     columns={2}
+    classes={{}}
     items={[
       {
         title: t('faq.question0.title'),

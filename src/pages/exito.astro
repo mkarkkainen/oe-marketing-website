@@ -1,7 +1,7 @@
 ---
 import { changeLanguage } from "i18next";
 import Layout from "~/layouts/PageLayout.astro";
-import HeroComponent from "~/components/widgets/HeroComponent.astro";
+import Hero from "~/components/widgets/Hero.astro";
 import Contact from "~/components/widgets/Contact.astro";
 import heroImage from "~/assets/images/oe-22.avif";
 
@@ -23,6 +23,6 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <HeroComponent section="contact" image={{ src: heroImage.src, alt: 'team picture' }} />
+  <Hero section="contact" image={{ src: heroImage.src, alt: 'team picture' }} />
   <Contact />
 </Layout>

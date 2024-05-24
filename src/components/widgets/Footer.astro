@@ -19,13 +19,10 @@ interface Links {
 
 export interface Props {
   links: Array<Links>;
-  secondaryLinks: Array<Link>;
   socialLinks: Array<Link>;
-  footNote?: string;
-  theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Astro.props;
+const { socialLinks = [], links = [] } = Astro.props;
 ---
 
 <style>
@@ -43,12 +40,12 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Ast
         <Logo />
       </span>
     </div>
-    <div class="text-dark mx-auto my-4 flex w-full flex-col items-center justify-center">
+    <div class="mx-auto my-4 flex w-full flex-col items-center justify-center">
       <p>Copyright © 2023 OceanExpress CR</p>
       <p>{t('rights')}</p>
     </div>
   </div>
-  <div class="text-dark mx-auto flex max-w-5xl flex-row flex-wrap py-16 md:justify-center">
+  <div class="mx-auto flex max-w-5xl flex-row flex-wrap py-16 md:justify-center">
     {
       links.map((linkSection, i) => (
         <div class="mb-16 flex w-full flex-col px-4 text-center sm:w-1/2 md:w-1/4 md:text-left">
@@ -81,7 +78,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Ast
                 {socialLinks.map(({ ariaLabel, href, text, icon }) => (
                   <li>
                     <a
-                      class="inline-flex h-[45px] w-[45px] items-center justify-center rounded-full bg-dark p-2.5 text-sm text-muted transition-transform duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-200"
+                      class="inline-flex h-[45px] w-[45px] items-center justify-center rounded-full bg-gray-600 p-2.5 text-sm text-muted transition-transform duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-200"
                       aria-label={ariaLabel}
                       href={href}
                     >
@@ -100,5 +97,5 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Ast
     </div>
   </div>
   <hr />
-  <div class="mx-auto max-w-6xl py-8">built with love</div>
+  <div class="mx-auto max-w-6xl py-8">built with love ❤️ </div>
 </footer>

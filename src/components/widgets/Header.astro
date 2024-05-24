@@ -48,7 +48,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     height: 1px; /* Adjusted thickness */
     bottom: -4px; /* Adjusted position */
     left: 0;
-    background-color: var(--oe-color-primary-dark);
+    background-color: black;
     width: 96%;
   }
 
@@ -59,7 +59,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     height: 1px; /* Adjusted thickness */
     bottom: -4px; /* Adjusted position */
     left: 0;
-    background-color: var(--oe-color-primary-dark);
+    background-color: black;
     transition: width 0.2s ease-out; /* Adjusted transition */
   }
 
@@ -100,14 +100,14 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       aria-label="Main navigation"
     >
       <ul
-        class="flex w-full flex-col gap-8 p-8 lg:p-0 text-2xl font-medium tracking-[0.01rem] lg:w-auto lg:flex-row lg:gap-0 lg:text-[17px] xl:gap-4"
+        class="flex w-full flex-col gap-8 text-2xl font-medium tracking-[0.01rem] lg:w-auto lg:flex-row lg:gap-0 lg:text-[17px] xl:gap-4"
       >
         {
           links.map(({ href }, i) => (
             <li class="my-1 px-3 xl:px-4">
               <a
                 class:list={[
-                  'text-dark items-centers whitespace-no-wrap relative',
+                  'items-centers whitespace-no-wrap relative',
                   { 'underline-active': localizePath(href) === localizePath(currentPath) },
                 ]}
                 href={localizePath(href)}
@@ -122,14 +122,14 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     <div
       class:list={[
         { 'ml-auto ': position === 'left' },
-        'fixed bottom-0 left-0 hidden w-full shrink items-center justify-end p-3 lg:static lg:mb-0 lg:flex lg:w-auto lg:basis-[25%] lg:p-0',
+        'fixed bottom-0 left-0 flex hidden w-full shrink items-center justify-end p-3 lg:static lg:mb-0 lg:flex lg:w-auto lg:basis-[25%] lg:p-0',
       ]}
     >
-      <div class="flex w-full items-center justify-between lg:w-auto p-8 lg:p-0">
+      <div class="flex w-full items-center justify-between lg:w-auto">
         <div class="">
-          <span class="text-dark text-2xl lg:hidden">{t('nav.language')}:</span>
+          <span class="text-2xl lg:hidden">{t('nav.language')}:</span>
           <LanguageSelector
-            class="text-dark bg-transparent p-2 text-2xl transition duration-150 ease-in hover:rounded-md hover:bg-slate-100 lg:text-[17px]"
+            class="bg-transparent p-2 text-2xl transition duration-150 ease-in hover:rounded-md hover:bg-slate-100 lg:text-[17px]"
             languageMapping={{ es: '🇨🇷 Es', en: '🇺🇸 En' }}
           />
         </div>

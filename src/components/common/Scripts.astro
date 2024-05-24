@@ -98,6 +98,20 @@
         ticking = true;
       }
     });
+    // Attach the scroll event listener for the map location
+    attachEvent('a[href="#map-location"]', 'click', function (event) {
+      event.preventDefault();
+
+      const targetElement = document.querySelector('#map-location');
+      const offset = 164; // Adjust this value as needed (e.g., 4rem = 64px)
+
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth',
+      });
+    });
   };
 
   window.onpageshow = function () {

@@ -2,7 +2,7 @@
 import Headline from '~/components/ui/Headline.astro';
 import ItemGrid from '~/components/ui/ItemGrid.astro';
 import Button from '~/components/ui/Button.astro';
-import Container from '~/components/ui/WidgetWrapper.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { Faqs } from '~/types';
 import { localizePath } from 'astro-i18next';
 
@@ -19,7 +19,7 @@ const {
 } = Astro.props as Faqs;
 ---
 
-<Container id={id} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
   <ItemGrid
@@ -29,18 +29,17 @@ const {
     classes={{
       container: `${columns === 1 ? 'max-w-4xl' : ''} gap-y-8 md:gap-y-12 py-8`,
       panel: 'max-w-none rounded-lg bg-white shadow1 border border-b-2 p-8',
-      title: 'text-dark',
       icon: 'flex-shrink-0 mt-1 w-6 h-6 text-primary',
-      description: 'text-lg text-dark',
+      description: 'text-lg',
     }}
   />
   {
     action && (
       <div class="flex w-full flex-col items-center justify-center">
-        <Button data-aos="fade-up-sm" href={localizePath('/preguntas')} variant="secondary" class="btn-primary">
+        <Button data-aos="fade-down-sm" href={localizePath('/preguntas')} variant="secondary" class="btn-primary">
           {action}
         </Button>
       </div>
     )
   }
-</Container>
+</WidgetWrapper>

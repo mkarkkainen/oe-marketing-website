@@ -26,6 +26,11 @@ i18n:
   language: es
   textDirection: ltr
 
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only"
 

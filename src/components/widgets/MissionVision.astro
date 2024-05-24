@@ -18,24 +18,24 @@ import { Icon } from 'astro-icon/components';
   />
   <div class="mx-auto flex max-w-6xl flex-col px-8 pb-16 pt-8">
     <div class="flex flex-col gap-8 md:flex-row md:gap-4">
-      <div class="flex w-full flex-row justify-start gap-4 md:w-1/2">
-        <div data-aos="fade-up-sm" class="hidden items-start justify-center md:flex">
+      <div data-aos="fade-up-sm" class="flex w-full flex-row justify-start gap-4 md:w-1/2">
+        <div class="hidden items-start justify-center md:flex">
           <Icon class="pt-4" name="vision" width={50} height={50} />
         </div>
         <div>
-          <h2 data-aos="fade-up-sm" class="mb-2 text-2xl-c font-bold text-white">{t('about.mv.vision.title')}</h2>
-          <p data-aos="fade-up-sm" class="text-lg text-white">{t('about.mv.vision.subtitle')}</p>
+          <h2 class="mb-2 text-2xl-c font-bold text-white">{t('about.mv.vision.title')}</h2>
+          <p class="text-md text-white">{t('about.mv.vision.subtitle')}</p>
         </div>
       </div>
-      <div class="flex w-full flex-row justify-start gap-4 md:w-1/2">
-        <div data-aos="fade-up-sm" class="hidden items-start justify-center md:flex">
+      <div data-aos="fade-up-sm" class="flex w-full flex-row justify-start gap-4 md:w-1/2">
+        <div class="hidden items-start justify-center md:flex">
           <Icon class="pt-2" name="mission" width={50} height={50} />
         </div>
-        <div class="">
-          <h2 data-aos="fade-up-sm" id="mission" class="relative mb-2 text-2xl-c font-bold text-white">
+        <div >
+          <h2 id="mission" class="relative mb-2 text-2xl-c font-bold text-white">
             {t('about.mv.mission.title')}
           </h2>
-          <p data-aos="fade-up-sm" class="text-lg text-white">{t('about.mv.mission.subtitle')}</p>
+          <p class="text-md text-white">{t('about.mv.mission.subtitle')}</p>
         </div>
       </div>
     </div>
