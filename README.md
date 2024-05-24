@@ -1,4 +1,4 @@
-# OceanExpress Website
+# OceanExpressCR Website
 
 This repository contains the source code for the OceanExpress' official website, designed and developed with a focus on reusability, performance, and scalability. Utilizing a modern tech stack including Astro, Tailwind CSS, and TypeScript, the site is crafted to serve as a foundation for building future features and components that can be easily shared across projects.
 
